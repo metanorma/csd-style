@@ -2,744 +2,20 @@
 <!DOCTYPE html SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns:epub="http://www.idpf.org/2007/ops">
   <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>rfc6350</title><style>
-  <!--
-html {
-  font-size: 100%; 
-}
-
-body { 
-  font-size: 1em;
-  margin: 0;
-  font-family: "Source Sans Pro",sans-serif;
-}
-
-h1 {
-  font-size: 1.5em; 
-  line-height: 2em; 
-  color: #485094;
-  font-weight: 400;
-}
-
-h2 {
-  font-size: 1.3em; 
-  line-height: 1.5em; 
-  color: #485094;
-  font-weight: 300;
-}
-
-h3 {
-  font-size: 1.1em; 
-  line-height: 1.3em; 
-  color: #485094;
-  font-weight: 300;
-}
-
-
-.WordSection2, .WordSection3 {
-  margin: 0 1.5em;
-}
-
-.zzSTDTitle1, .MsoCommentText {
-  display: none;
-}
-
-a, a:visited {
-  text-decoration: none;
-  color: #485094;
-}
-
-a:hover {
-  text-style: italic;
-  color: #485094;
-}
-
-p.TermNum {
-  color: #485094;
-  font-weight: 400;
-	margin: 0;
-}
-
-p.Terms {
-  color: #485094;
-  font-weight: 400;
-	margin: 0;
-}
-
-p.AltTerms {
-  color: #485094;
-  font-weight: 400;
-  font-style: italic;
-	margin: 0;
-}
-
-p.DeprecatedTerms {
-  color: #485094;
-  font-weight: 400;
-  font-style: italic;
-	margin: 0;
-}
-
-
-ul {
-  padding-left: 1em;
-}
-
-#toc-list ul {
-  margin-bottom: 0.25em;
-}
-#toc-list li {
-  list-style-type: none;
-}
-
-.coverpage {
-  text-align: center;
-  margin: 2em 0;
-}
-
-.coverpage-logo {
-  color: #485094;
-}
-
-.coverpage-tc-name {
-  color: #485094;
-  font-size: 1.2em;
-  line-height: 1.2em;
-  margin: 0.25em 0;
-}
-
-.coverpage-doc-identity {
-  background-color: #485094;
-  color: white;
-  font-size: 2em;
-  line-height: 2em;
-  margin: 0.5em 0;
-}
-
-.coverpage-title {
-  font-weight: 400;
-}
-
-.coverpage-title .title-second {
-  display: none;
-}
-
-.coverpage-stage-block {
-  font-style: italic ;
-  font-size: 1.25em;
-  font-weight: 600;
-}
-
-.coverpage-warning {
-  border-top: solid 1px #f36f36;
-  border-bottom: solid 1px #f36f36;
-  margin: 1em 2em;
-  color: #485094;
-  padding: 1em;
-}
-
-.coverpage-warning .title {
-  color: #f36f36;
-  font-weight: 500;
-}
-
-.coverpage-warning .content {
-  font-style: italic;
-}
-
-.copyright {
-  padding: 1em;
-}
-
-.copyright .name {
-  color: #485094;
-  font-weight: 600;
-}
-
-.copyright .address {
-  color: #485094;
-}
-
-div.rule {
-  width: 100%;
-  height: 1px;
-  background-color: #485094;
-  margin: 2em 0;
-}
-
-p.MsoCommentText, li.MsoCommentText, div.MsoCommentText
-        {
-        margin-top:0cm;
-        margin-right:0cm;
-        margin-bottom:12.0pt;
-        margin-left:0cm;
-        text-align:justify;
-        line-height:12.0pt;
-        tab-stops:20.15pt;
-        font-size:12.0pt;
-        font-family:"Cambria",serif;
-      }
-p.MsoCommentSubject, li.MsoCommentSubject, div.MsoCommentSubject
-{
-        margin-top:0cm;
-        margin-right:0cm;
-        margin-bottom:12.0pt;
-        margin-left:0cm;
-        text-align:justify;
-        line-height:12.0pt;
-        tab-stops:20.15pt;
-        font-size:10.0pt;
-        font-family:"Cambria",serif;
-        font-weight:bold;}
-
--->
-</style>
-    <style>
-      <!--
-p.Sourcecode, li.Sourcecode, div.Sourcecode, pre.Sourcecode
-	{mso-style-unhide:no;
-	mso-style-qformat:yes;
-	mso-style-parent:"";
-	margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:12.0pt;
-	margin-left:0cm;
-	text-align:left;
-	line-height:12.0pt;
-	mso-pagination:widow-orphan;
-	tab-stops:20.15pt;
-	font-size:9.0pt;
-	font-family:"Courier New",monospace;
-	mso-fareast-font-family:Calibri;
-	mso-bidi-font-family:"Courier New";
-	mso-ansi-language:EN-GB;}
-p.Biblio, li.Biblio, div.Biblio
-	{mso-style-unhide:no;
-	mso-style-qformat:yes;
-	mso-style-parent:"";
-	margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:12.0pt;
-    margin-left:33.15pt;
-    text-indent:-33.15pt;
-    tab-stops: 33.15pt;
-	line-height:12.0pt;
-	mso-pagination:widow-orphan;
-	font-size:11.0pt;
-	font-family:"Source Sans Pro",sans-serif;
-	mso-fareast-font-family:Calibri;
-	mso-bidi-font-family:"Source Sans Pro";
-	mso-ansi-language:EN-GB;}
-p.FigureTitle
-	{mso-style-unhide:no;
-	mso-style-qformat:yes;
-	mso-style-parent:"";
-	margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:6.0pt;
-	margin-left:0cm;
-	text-align:center;
-	line-height:12.0pt;
-	page-break-before:avoid;
-	mso-pagination:widow-orphan;
-	tab-stops:20.15pt;
-	font-size:11.0pt;
-	font-family:"Source Sans Pro",sans-serif;
-	mso-fareast-font-family:Calibri;
-	mso-bidi-font-family:"Source Sans Pro";
-	mso-ansi-language:EN-GB;}
-p.TableTitle
-	{mso-style-unhide:no;
-	mso-style-qformat:yes;
-	mso-style-parent:"";
-	margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:6.0pt;
-	margin-left:0cm;
-	text-align:center;
-	page-break-after:avoid;
-	line-height:12.0pt;
-	mso-pagination:widow-orphan;
-	tab-stops:20.15pt;
-	font-size:11.0pt;
-	font-family:"Source Sans Pro",sans-serif;
-	mso-fareast-font-family:Calibri;
-	mso-bidi-font-family:"Source Sans Pro";
-	mso-ansi-language:EN-GB;}
-p.Note, div.Note, li.Note
-	{mso-style-unhide:no;
-	mso-style-qformat:yes;
-	mso-style-parent:"";
-	margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:12.0pt;
-	margin-left:0cm;
-	text-align:justify;
-	line-height:12.0pt;
-	mso-pagination:widow-orphan;
-	tab-stops:20.15pt;
-	font-size:10.0pt;
-	mso-bidi-font-size:11.0pt;
-	font-family:"Source Sans Pro",sans-serif;
-        font-size:10.0pt;
-	mso-fareast-font-family:Calibri;
-	mso-bidi-font-family:"Source Sans Pro";
-	mso-ansi-language:EN-GB;}
-p.ANNEX, li.ANNEX, div.ANNEX
-	{mso-style-name:ANNEX;
-	mso-style-priority:10;
-	mso-style-unhide:no;
-	mso-style-next:Normal;
-	margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:24.0pt;
-	margin-left:0cm;
-	text-align:center;
-	text-indent:0cm;
-	line-height:15.5pt;
-	mso-line-height-rule:exactly;
-	page-break-before:always;
-	mso-pagination:widow-orphan;
-	page-break-after:avoid;
-	mso-outline-level:1;
-	mso-list:l0 level1 lfo12;
-	tab-stops:20.15pt;
-	font-size:14.0pt;
-	mso-bidi-font-size:11.0pt;
-	font-family:"Source Sans Pro",sans-serif;
-	mso-fareast-font-family:"MS Mincho";
-	mso-bidi-font-family:"Source Sans Pro";
-	mso-ansi-language:EN-GB;
-	mso-fareast-language:JA;
-	font-weight:bold;
-	mso-bidi-font-weight:normal;}
-p.BiblioTitle, li.BiblioTitle, div.BiblioTitle
-	{mso-style-name:"Biblio Title";
-	mso-style-noshow:yes;
-	mso-style-unhide:no;
-	margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:15.5pt;
-	margin-left:0cm;
-	text-align:center;
-	line-height:15.5pt;
-	mso-pagination:widow-orphan;
-	mso-outline-level:1;
-	tab-stops:20.15pt;
-	font-size:14.0pt;
-	mso-bidi-font-size:11.0pt;
-	font-family:"Source Sans Pro",sans-serif;
-	mso-fareast-font-family:Calibri;
-	mso-bidi-font-family:"Source Sans Pro";
-	mso-ansi-language:EN-GB;
-	font-weight:bold;
-	mso-bidi-font-weight:normal;}
-p.Definition, li.Definition, div.Definition
-	{mso-style-name:Definition;
-	mso-style-priority:9;
-	mso-style-unhide:no;
-	margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:12.0pt;
-	margin-left:0cm;
-	text-align:justify;
-	line-height:12.0pt;
-	mso-pagination:widow-orphan;
-	tab-stops:20.15pt;
-	font-size:11.0pt;
-	font-family:"Source Sans Pro",sans-serif;
-	mso-fareast-font-family:Calibri;
-	mso-bidi-font-family:"Source Sans Pro";
-	mso-ansi-language:EN-GB;}
-p.ForewordTitle, li.ForewordTitle, div.ForewordTitle
-	{mso-style-name:"Foreword Title";
-	mso-style-noshow:yes;
-	mso-style-unhide:no;
-	margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:15.5pt;
-	margin-left:0cm;
-	text-align:justify;
-	line-height:15.5pt;
-	page-break-before:always;
-	mso-pagination:widow-orphan;
-	page-break-after:avoid;
-	mso-outline-level:1;
-	mso-hyphenate:none;
-	tab-stops:20.15pt;
-	font-size:14.0pt;
-	mso-bidi-font-size:11.0pt;
-	font-family:"Source Sans Pro",sans-serif;
-	mso-fareast-font-family:Calibri;
-	mso-bidi-font-family:"Source Sans Pro";
-	mso-ansi-language:EN-GB;
-	font-weight:bold;
-	mso-bidi-font-weight:normal;}
-p.IntroTitle, li.IntroTitle, div.IntroTitle
-	{mso-style-name:"Intro Title";
-	mso-style-noshow:yes;
-	mso-style-unhide:no;
-	mso-style-parent:"Foreword Title";
-	margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:15.5pt;
-	margin-left:0cm;
-	text-align:justify;
-	line-height:15.5pt;
-	mso-pagination:widow-orphan;
-	page-break-after:avoid;
-	mso-outline-level:1;
-	mso-hyphenate:none;
-	tab-stops:20.15pt;
-	font-size:14.0pt;
-	mso-bidi-font-size:11.0pt;
-	page-break-before:always;
-	font-family:"Source Sans Pro",sans-serif;
-	mso-fareast-font-family:Calibri;
-	mso-bidi-font-family:"Source Sans Pro";
-	mso-ansi-language:EN-GB;
-	font-weight:bold;
-	mso-bidi-font-weight:normal;}
-p.zzContents, li.zzContents, div.zzContents
-	{mso-style-name:zzContents;
-	mso-style-noshow:yes;
-	mso-style-unhide:no;
-	mso-style-next:"TOC 1";
-	margin-top:48.0pt;
-	margin-right:0cm;
-	margin-bottom:15.5pt;
-	margin-left:0cm;
-	line-height:15.5pt;
-	mso-line-height-rule:exactly;
-	page-break-before:always;
-	mso-pagination:widow-orphan;
-	page-break-after:avoid;
-	mso-hyphenate:none;
-	tab-stops:20.15pt;
-	font-size:14.0pt;
-	mso-bidi-font-size:11.0pt;
-	font-family:"Source Sans Pro",sans-serif;
-	mso-fareast-font-family:Calibri;
-	mso-bidi-font-family:"Source Sans Pro";
-	mso-ansi-language:EN-GB;
-	font-weight:bold;
-	mso-bidi-font-weight:normal;}
-p.zzCopyright, li.zzCopyright
-	{mso-style-name:zzCopyright;
-	mso-style-noshow:yes;
-	mso-style-unhide:no;
-	mso-style-next:Normal;
-	margin-top:0cm;
-	margin-right:14.2pt;
-	margin-bottom:12.0pt;
-	margin-left:14.2pt;
-	text-align:justify;
-	line-height:12.0pt;
-	mso-pagination:widow-orphan;
-	tab-stops:20.15pt 25.7pt 481.15pt;
-	padding:0cm;
-	mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt;
-	font-size:11.0pt;
-	font-family:"Source Sans Pro",sans-serif;
-	mso-fareast-font-family:Calibri;
-	mso-bidi-font-family:"Source Sans Pro";
-	mso-ansi-language:EN-GB;}
-div.zzCopyright
-    {mso-element:para-border-div;
-    border:solid windowtext 1.0pt;
-    mso-border-top-alt:solid windowtext .5pt;
-    mso-border-left-alt:solid windowtext .5pt;
-    mso-border-right-alt:solid windowtext .5pt;
-    mso-border-bottom-alt:solid windowtext .5pt;
-    padding:1.0pt 4.0pt 0cm 4.0pt;
-    margin-left:5.1pt;
-    margin-right:5.1pt;}
-p.zzCopyright_address
-    {margin-top:0cm;
-	margin-right:14.2pt;
-	margin-bottom:0.0pt;
-	margin-left:14.2pt;
-    mso-layout-grid-align:none;
-    text-autospace:none;
-	padding-left:20pt;
-	mso-padding-alt-left:20pt;
-    font-size:10.0pt;
-	text-align:left;
-    mso-bidi-font-size:11.0pt;}
-p.zzSTDTitle, li.zzSTDTitle, div.zzSTDTitle
-	{mso-style-name:zzSTDTitle;
-	mso-style-noshow:yes;
-	mso-style-unhide:no;
-	mso-style-next:Normal;
-	margin-top:20.0pt;
-	margin-right:0cm;
-	margin-bottom:38.0pt;
-	margin-left:0cm;
-	line-height:17.5pt;
-	mso-line-height-rule:exactly;
-	mso-pagination:widow-orphan;
-	mso-hyphenate:none;
-	tab-stops:20.15pt;
-	font-size:16.0pt;
-	mso-bidi-font-size:11.0pt;
-	font-family:"Source Sans Pro",sans-serif;
-	mso-fareast-font-family:Calibri;
-	mso-bidi-font-family:"Source Sans Pro";
-	mso-ansi-language:EN-GB;
-	font-weight:bold;
-	mso-bidi-font-weight:normal;}
-p.zzSTDTitle1, li.zzSTDTitle1, div.zzSTDTitle1
-	{mso-style-name:zzSTDTitle;
-	mso-style-noshow:yes;
-	mso-style-unhide:no;
-	mso-style-next:Normal;
-	margin-top:0pt;
-	margin-right:0cm;
-	margin-bottom:18.0pt;
-	margin-left:0cm;
-	line-height:17.5pt;
-	mso-line-height-rule:exactly;
-	mso-pagination:widow-orphan;
-	mso-hyphenate:none;
-	tab-stops:20.15pt;
-	font-size:16.0pt;
-	mso-bidi-font-size:11.0pt;
-	font-family:"Source Sans Pro",sans-serif;
-	mso-fareast-font-family:Calibri;
-	mso-bidi-font-family:"Source Sans Pro";
-	mso-ansi-language:EN-GB;
-	font-weight:bold;
-	mso-bidi-font-weight:normal;}
-p.Quote, li.Quote, div.Quote
-	{mso-style-priority:99;
-	margin-top:0cm;
-	margin-right:36.0pt;
-	margin-bottom:0cm;
-	margin-left:36.0pt;
-	text-align:justify;
-	line-height:12.0pt;
-	mso-pagination:widow-orphan;
-	tab-stops:20.15pt;
-	font-size:11.0pt;
-	font-family:"Source Sans Pro",sans-serif;
-	mso-fareast-font-family:Calibri;
-	mso-bidi-font-family:"Source Sans Pro";
-	mso-ansi-language:EN-GB;}
-p.QuoteAttribution
-        {text-align:right;}
-p.Admonition, li.Admonition, div.Admonition
-	{mso-style-priority:99;
-	margin-top:0cm;
-	margin-right:57.6pt;
-	margin-bottom:0cm;
-	margin-left:57.6pt;
-	margin-bottom:.0001pt;
-	mso-pagination:widow-orphan;
-	border:none;
-	mso-border-alt:solid #4472C4 .25pt;
-	mso-border-themecolor:accent1;
-	padding:0cm;
-	mso-padding-alt:10.0pt 10.0pt 10.0pt 10.0pt;
-	font-size:12.0pt;
-	font-family:"Calibri",sans-serif;
-	mso-ascii-font-family:Calibri;
-	mso-ascii-theme-font:minor-latin;
-	mso-fareast-font-family:"Source Sans Pro";
-	mso-fareast-theme-font:minor-fareast;
-	mso-hansi-font-family:Calibri;
-	mso-hansi-theme-font:minor-latin;
-	mso-bidi-font-family:"Source Sans Pro";
-	mso-bidi-theme-font:minor-bidi;
-	color:#4472C4;
-	mso-themecolor:accent1;
-	mso-ansi-language:EN-AU;
-	font-style:italic;}
-p.Code, li.Code, div.Code
-	{mso-style-name:Code;
-	mso-style-priority:16;
-	mso-style-unhide:no;
-	mso-style-qformat:yes;
-	margin:0cm;
-	margin-bottom:.0001pt;
-	line-height:10.0pt;
-	mso-pagination:widow-orphan;
-	tab-stops:20.15pt;
-	font-size:9.0pt;
-	mso-bidi-font-size:11.0pt;
-	font-family:"Courier New",serif;
-	mso-fareast-font-family:Calibri;
-	mso-bidi-font-family:"Source Sans Pro";
-	mso-ansi-language:EN-GB;}
-p.Formula, li.Formula, div.Formula
-	{mso-style-name:Formula;
-	mso-style-noshow:yes;
-	mso-style-unhide:no;
-	margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:11.0pt;
-	margin-left:20.15pt;
-	line-height:12.0pt;
-	mso-pagination:widow-orphan;
-	tab-stops:right 487.45pt;
-	font-size:11.0pt;
-	font-family:"Source Sans Pro",sans-serif;
-	mso-fareast-font-family:"Source Sans Pro";
-	mso-bidi-font-family:"Source Sans Pro";
-	mso-ansi-language:EN-GB;}
-@page WordSection1
-	{size:595.3pt 841.9pt;
-	margin:39.7pt 53.85pt 1.0cm 53.85pt;
-	mso-header-margin:35.45pt;
-	mso-footer-margin:14.2pt;
-	mso-even-header:url("file:///C:/Doc/rfc6350_files/header.html") eh1;
-	mso-header:url("file:///C:/Doc/rfc6350_files/header.html") h1;
-	mso-even-footer:url("file:///C:/Doc/rfc6350_files/header.html") ef1;
-	mso-paper-source:0;}
-div.WordSection1
-	{page:WordSection1;}
-@page WordSection2
-	{size:595.3pt 841.9pt;
-	margin:39.7pt 53.85pt 1.0cm 53.85pt;
-	mso-header-margin:35.45pt;
-	mso-footer-margin:14.2pt;
-	mso-page-numbers:roman-lower;
-	mso-even-header:url("file:///C:/Doc/rfc6350_files/header.html") eh2;
-	mso-header:url("file:///C:/Doc/rfc6350_files/header.html") h2;
-	mso-even-footer:url("file:///C:/Doc/rfc6350_files/header.html") ef2;
-	mso-footer:url("file:///C:/Doc/rfc6350_files/header.html") f2;
-	mso-paper-source:0;}
-div.WordSection2
-	{page:WordSection2;}
-@page WordSection3
-	{size:595.3pt 841.9pt;
-	margin:39.7pt 53.85pt 1.0cm 53.85pt;
-	mso-header-margin:35.45pt;
-	mso-footer-margin:14.2pt;
-	mso-page-numbers:1;
-	mso-even-header:url("file:///C:/Doc/rfc6350_files/header.html") eh2;
-	mso-header:url("file:///C:/Doc/rfc6350_files/header.html") h2;
-	mso-even-footer:url("file:///C:/Doc/rfc6350_files/header.html") ef3;
-	mso-footer:url("file:///C:/Doc/rfc6350_files/header.html") f3;
-	mso-paper-source:0;}
-div.WordSection3
-	{page:WordSection3;}
-ol
-	{margin-bottom:0cm;}
-ul
-	{margin-bottom:0cm;}
-table.MsoISOTable
-	{mso-style-name:"Table ISO";
-	mso-tstyle-rowband-size:0;
-	mso-tstyle-colband-size:0;
-	mso-style-noshow:yes;
-	mso-style-priority:99;
-	mso-style-parent:"";
-	mso-padding-alt:0cm 2.85pt 0cm 2.85pt;
-	mso-para-margin:0cm;
-	mso-para-margin-bottom:.0001pt;
-	mso-pagination:widow-orphan;
-	border-collapse:collapse;
-	mso-table-layout-alt:fixed;
-	border:solid windowtext 2pt;
-	mso-border-alt:solid windowtext 2pt;
-	mso-yfti-tbllook:480;
-	mso-border-insideh:.75pt solid windowtext;
-	mso-border-insidev:.75pt solid windowtext;
-	font-size:10.0pt;
-	font-family:"Source Sans Pro",sans-serif;}
-table.MsoISOTable tr
-    {page-break-inside:avoid;}
-table.MsoISOTable th
-    {border:solid windowtext 1pt;
-    mso-border-alt:solid windowtext 1pt;
-    padding:0cm 2.85pt 0cm 2.85pt;}
-table.MsoISOTable td
-    {border:solid windowtext 1pt;
-    mso-border-alt:solid windowtext 1pt;
-    padding:0cm 2.85pt 0cm 2.85pt;}
-table.MsoTableGrid
-	{mso-style-name:"Table Grid";
-	mso-tstyle-rowband-size:0;
-	mso-tstyle-colband-size:0;
-	mso-style-priority:39;
-	mso-style-unhide:no;
-	border:solid windowtext 1.0pt;
-	mso-border-alt:solid windowtext .5pt;
-	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
-	mso-border-insideh:.5pt solid windowtext;
-	mso-border-insidev:.5pt solid windowtext;
-	mso-para-margin:0cm;
-	mso-para-margin-bottom:.0001pt;
-	mso-pagination:widow-orphan;
-	font-size:10.0pt;
-	font-family:"Source Sans Pro",sans-serif;}
-td { page-break-inside:avoid; }
-tr { page-break-after:avoid; }
-span.stem
-    {font-family:"Cambria Math",serif;
-    mso-ascii-font-family:"Cambria Math";
-    font-style:
-    italic;}
-div.formula
-    {tab-stops:right 487.45pt;}
-body
-    {tab-interval:36.0pt;}
-dt
-    {page-break-inside:avoid;
-    page-break-after:avoid}
-.coverpage_docnumber
-    {text-align:center;
-    font-size:14.0pt;
-    font-weight:bold;}
-.coverpage_techcommittee
-    {text-align:center;}
-.coverpage_docstage
-    {text-align:center;
-    font-size:30.0pt;
-    color:#485094;}
-div.coverpage_warning
-    {mso-element:para-border-div;
-    border:solid windowtext 1.0pt #485094;
-    mso-border-alt:solid windowtext .5pt;
-    padding:1.0pt 4.0pt 1.0pt 4.0pt #485094;
-    margin-left:4.25pt;
-    margin-right:4.25pt}
-.coverpage_warning
-    {color:#485094;
-    font-size:10.0pt;}
-
-    a.TableFootnoteRef
-        {mso-style-priority:99;
-        vertical-align:super;}
-
-        aside {
-          font-size:10.0pt;
-}
-div.example {
-	border:solid black .25pt;
-	mso-border-alt:solid black .25pt;
-	padding:10pt;
-	mso-padding-alt:10.0pt 10.0pt 10.0pt 10.0pt;
-	margin:10pt;
-	mso-margin-alt:10.0pt 10.0pt 10.0pt 10.0pt;
-}
-
-
--->
-    </style>
+    <title>rfc6350</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript"  src="https://cdn.rawgit.com/jgallen23/toc/0.3.2/dist/toc.min.js"></script>
   </head>
-  <body lang="EN-US" link="blue" vlink="#954F72" xml:lang="EN-US">
-    <div class="WordSection1">
 
-<div class="coverpage">
+<body lang="EN-US" link="blue" vlink="#954F72" xml:lang="EN-US" class="container">
+    <div id='toggle'> <span><</span> </div>
+<header>
+    
+<div class="WordSection1">
+  <div class="coverpage">
+    <div class="wrapper-top">
 
-  <div class="coverpage-logo">
-    <span>The Calendaring and Scheduling Consortium</span>
-  </div>
-
-  <div class="coverpage-tc-name">
-    <span>TC </span>
-  </div>
 
   <div class="coverpage-doc-identity">
     <div class="doc-number">
@@ -753,10 +29,26 @@ div.example {
       <!--<span class="title-second"></span>-->
     </div>
   </div>
-
-  <div class="coverpage-stage-block">
-    <span class="coverpage-stage">Standard Stage</span>
+  <div class="coverpage-logo">
+      <span>The Calendaring and Scheduling Consortium</span>
+    </div>
+  
+    <div class="coverpage-tc-name">
+      <span>TC </span>
+    </div>
   </div>
+
+  <div class="coverpage-stage-block" >
+    <span class="coverpage-stage" id="standard">Standard Stage</span>
+  </div>
+
+  <div class="coverpage-stage-block" >
+      <span class="coverpage-stage" id="governance">Governance Stage</span>
+    </div>
+
+    <div class="coverpage-stage-block" >
+        <span class="coverpage-stage" id="guide">Guide Stage</span>
+      </div>
 
   <div class="coverpage-warning">
     <span class="title">Warning for Drafts</span>
@@ -772,12 +64,11 @@ div.example {
 
 </div>
 
+</div>
+    
 
-
-      <p>&#xA0;</p>
-    </div>
-    <br clear="all" class="section" />
-    <div class="WordSection2">
+    
+<div class="WordSection2">
 
 <div class="copyright">
   <p class="year">
@@ -792,6 +83,7 @@ div.example {
     be requested from the address below.
   </p>
 
+<div class="contact-info">
   <p class="name">The Calendaring and Scheduling Consortium, Inc.</p>
   <p class="address">
     4390 Chaffin Lane<br />
@@ -799,65 +91,42 @@ div.example {
     California 95519<br />
     United States of America<br />
     <br />
-    copyright@calconnect.org<br />
-    www.calconnect.org
+    <a href="mailto:copyright@calconnect.org">copyright@calconnect.org</a><br />
+    <a href="www.calconnect.org">www.calconnect.org</a>
   </p>
 </div>
-
-<div class="rule"></div>
-
-<div class="toc">
-  <h1 class="toc-contents">Contents</h1>
-  <ul id="toc-list"></ul>
 </div>
 
 <div class="rule"></div>
 
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"><![CDATA[
-]]></script>
+</header>
 
-<script><![CDATA[
-// http://tutorials.jenkov.com/jquery/generating-table-of-contents.html
-$(document).ready(function() {
-  $("#toc-list").empty();
+<nav>
+  <h1 id="content">Contents</h1>
+  <div id="toc"></div>
 
-  var prevH2Item = null;
-  var prevH2List = null;
-
-  var index = 0;
-  $("h1, h2").each(function() {
-
-    if ($(this).hasClass("toc-contents")) {
-      return;
-    }
-    //insert an anchor to jump to, from the TOC link.
-    var anchor = "<a name='" + index + "'></a>";
-    $(this).before(anchor);
-
-    var li     = "<li><a href='#" + index + "'>" + $(this).text() + "</a></li>";
-
-    if ($(this).is("h1") ){
-      prevH2List = $("<ul></ul>");
-      prevH2Item = $(li);
-      prevH2Item.append(prevH2List);
-      prevH2Item.appendTo("#toc-list");
-    } else {
-      prevH2List.append(li);
-    }
-    index++;
-  });
-});
-]]></script>
+</nav>
 
 
-      <br clear="all" style="mso-special-character:line-break;page-break-before:always" />
+<div class="rule toc"></div>
+
+
+<main>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
       <div>
-        <h1 class="ForewordTitle">Foreword</h1>
-        <p id="_fdaf7caf-550a-4770-914a-0f871a85bb45">TBD</p>
+<h1>
+    <a href="#toc0" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg>
+    </a>
+  Foreword</h1>
+<p>TBD</p>
       </div>
-      <br clear="all" style="mso-special-character:line-break;page-break-before:always" />
+
       <div class="Section3" id="section1">
-        <h1 class="IntroTitle">0.<span style="mso-tab-count:1">&#xA0; </span>Introduction</h1>
+<h1>
+    <a href="#toc1" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg>
+    </a>
+  0.<span>&#xA0; </span>Introduction</h1>
         <p id="_62230e58-b3e3-455e-ac92-51bf83ad91d3">Electronic address books have become ubiquitous.  Their increased
 presence on portable, connected devices as well as the diversity of
 platforms that exchange contact data call for a standard.  This memo
@@ -867,7 +136,7 @@ application.</p>
         <p id="_11321122-a8e0-49d0-9294-49a3ff064a81">A high-level overview of the differences from <a href="#RFC2425">IETF RFC 2425</a> and <a href="#RFC2426">IETF RFC 2426</a> can
 be found in <a href="#appendixA">Appendix B</a>.</p>
         <div id="_conventions">
-  <h2>0.1. Conventions</h2>
+<h2>0.1. Conventions</h2>
   <p id="_43e945eb-e8b0-40de-b04b-a282f12d70a1">The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT",
 "SHOULD", "SHOULD NOT", "RECOMMENDED", "NOT RECOMMENDED", "MAY", and
 "OPTIONAL" in this document are to be interpreted as described in
@@ -880,7 +149,12 @@ be found in <a href="#appendixA">Appendix B</a>.</p>
     <div class="WordSection3">
       <p class="zzSTDTitle1">vCard Format Specification</p>
       <div id="_scope">
-        <h1>1.<span style="mso-tab-count:1">&#xA0; </span>Scope</h1>
+        
+        
+        <h1>
+            <a href="#toc2" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg>
+            </a>
+          1.<span style="mso-tab-count:1">&#xA0; </span>Scope</h1>
         <p id="_343c9d28-86f5-4c8a-a059-3e0ec62b221e">This document defines the vCard data format for representing and
 exchanging a variety of information about individuals and other
 entities (e.g., formatted and structured name and delivery addresses,
@@ -3186,6 +2460,94 @@ property&#x2019;s content.</p>
         <p id="vCard21" class="Biblio">[17]<span style="mso-tab-count:1">&#xA0; </span>Internet Mail Consortium vCard,Internet Mail Consortium. <i>vCard - The Electronic Business Card Version 2.1.</i> 1996.</p>
       </div>
     </div>
+
+  </main>
+  <script>
+    //TOC generation
+      $('#toc').toc({
+          'selectors': 'h1,h2', //elements to use as headings
+          'container': 'main', //element to find all selectors in
+          'smoothScrolling': true, //enable or disable smooth scrolling on click
+          'prefix': 'toc', //prefix for anchor tags and class names
+          'onHighlight': function(el) {}, //called when a new section is highlighted 
+          'highlightOnScroll': true, //add class to heading that is currently in focus
+          'highlightOffset': 100, //offset to trigger the next headline
+          'anchorName': function(i, heading, prefix) { //custom function for anchor name
+              return prefix+i;
+          },
+          'headerText': function(i, heading, $heading) { //custom function building the header-item text
+              return $heading.text();
+          },
+      'itemClass': function(i, heading, $heading, prefix) { // custom function for item class
+        return $heading[0].tagName.toLowerCase();
+      }
+      });
+      
+  </script>
+
+<script>
+  //TOC toggle animation
+$('#toggle').on('click', function(){
+    if( $('nav').is(':visible') ) {
+        $('nav').animate({ 'left': '-293px' }, 'slow', function(){
+            $('nav').hide();
+        });
+        $('.container').animate({ 'padding-left': '0px' }, 'slow');
+        $('#toggle-icon').animate({ 'transform': 'rotate(180deg)' }, 'slow');
+    }
+    else {
+        $('nav').show();
+        $('nav').animate({ 'left': '0px' }, 'slow');
+        $('.container').animate({ 'padding-left': '320px' }, 'slow');
+        $('#toggle-icon').animate({ 'transform': 'rotate(180deg)' }, 'slow');
+    }
+});
+</script>
+
+<script>
+  //TOC toggle rotation
+  $(document).ready(function() {
+
+
+var degrees = 0;
+$('#toggle').click(function rotateMe(e) {
+
+  degrees += 180;
+
+  $('#toggle').css({
+
+    'transform': 'rotate(' + degrees + 'deg)',
+    '-ms-transform': 'rotate(' + degrees + 'deg)',
+    '-moz-transform': 'rotate(' + degrees + 'deg)',
+    '-webkit-transform': 'rotate(' + degrees + 'deg)',
+    '-o-transform': 'rotate(' + degrees + 'deg)'
+  });
+
+})
+
+});
+
+</script>
+
+<script>
+    // Scroll to top button
+    window.onscroll = function() {scrollFunction()};
+    
+    function scrollFunction() {
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            document.getElementById("myBtn").style.display = "block";
+        } else {
+            document.getElementById("myBtn").style.display = "none";
+        }
+    }
+    
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+    </script>
+
   <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     asciimath2jax: {
