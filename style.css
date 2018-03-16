@@ -390,6 +390,34 @@ p.Biblio {
     #guide {
         border-bottom: solid 3px #48a0e7;
         }
+
+        .coverpage-maturity {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 400;
+            font-size: 1em;
+            margin: 0 0 2em 0;
+            text-transform: uppercase;
+          }
+
+    #working-draft {
+        border-bottom: solid 3px #fda706;
+        }
+
+    #committee-draft {
+        border-bottom: solid 3px #fda706;
+        }
+
+        #draft-standard {
+            border-bottom: solid 3px #fdf906;
+            }
+
+            #standard {
+                border-bottom: solid 3px #0ac442;
+                }
+
+                #obsolete {
+                    border-bottom: solid 3px #7e0d13;
+                    }
   
 /*
     2.3 Draft Warning
