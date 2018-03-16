@@ -8,8 +8,10 @@ html {font-size: 100%;}
     0.1 Font imports
 */
 
-@import url('https://fonts.googleapis.com/css?family=Montserrat:300,300i,400');
-@import url('https://fonts.googleapis.com/css?family=Space+Mono');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:700,900');
+@import url('https://fonts.googleapis.com/css?family=Space+Mono:400,700');
+@import url('https://fonts.googleapis.com/css?family=Merriweather:400,400i,700');
+
  
 /*
     0.2 HTML & Body
@@ -18,10 +20,10 @@ html {font-size: 100%;}
   body { 
     font-size: 1em;
     margin: 0;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 300;
+    font-family: 'Merriweather', serif;
+    font-weight: 400;
     font-size: 15px;
-    line-height: 1.6em;
+    line-height: 1.7em;
     margin-left: auto;
     margin-right: auto;
     max-width: 100%;
@@ -29,7 +31,11 @@ html {font-size: 100%;}
     background-color: #ffffff;
   }
 
-  main {margin: 0 3em 0 3em;}
+  main {margin: 0 3em 0 4em;}
+
+  #toc{
+    font-family: 'Montserrat', sans-serif;
+  }
 
 /*
     0.3 Responsive navigation layout
@@ -41,14 +47,35 @@ html {font-size: 100%;}
         top: 0;
         bottom: 0;
         left: 0;
-        width: 25vw;
+        width: 293px;
         font-size: 0.9em;
         overflow: auto;
-        padding: 0 1em 0 2em;
+        padding: 0 0 0 2em;
         background-color:#f7f7f7; 
     }
+
+    #toggle {
+        position: fixed;
+        height: 100%;
+        width: 20px;
+        padding:3px;
+        text-align: center;
+        background-color:#0f0f0f;
+        color: white!important;
+        cursor: pointer;
+    }
+
+    #toggle span {
+
+        position: absolute;             
+        top: 50%;
+
+        transform: translate(0, -50%)
+    }
+
+
     .container {
-        padding-left: 28vw;
+        padding-left: 320px;
     }
 
     .rule.toc {
@@ -66,12 +93,56 @@ html {font-size: 100%;}
 }
 
 @media (max-width: 768px) {
-    nav {
+    #toc {
         padding: 0 1.5em 0 1.5em;
         overflow: visible;
     }
 }
   
+
+
+#toc ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#toc li {
+    padding: 5px 10px;
+}
+
+#toc a {
+    color: #485094;
+    text-decoration: none;
+    display: block;
+}
+
+#toc a:hover {
+    color: white;
+}
+
+#toc .h2 {
+    padding-left: 30px;
+}
+
+#toc .toc-h3 {
+    padding-left: 20px;
+}
+
+#toc .toc-active a {
+    color: white;
+}
+
+#toc .toc-active, #toc li:hover {
+    background: #0f0f0f;
+    box-shadow: inset -5px 0px 10px -5px #0f0f0f!important;
+}
+
+#toc li:hover a {
+    color: white;
+}
+
+
 /*
     1. TYPOGRAPHY
 */
@@ -81,20 +152,43 @@ html {font-size: 100%;}
 */
   
   h1,h2,h3,h4,h5,h6 {
+    font-family: 'Montserrat', sans-serif;
     color: #485094;
-    font-weight: 400;
+    font-weight: 900;
     margin-top: 2em;
   }
 
   h1 {
     font-size: 1.4em; 
+    letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: #b63eee;
+    margin-top: 4em;
+  }
+
+  h1#content {
+      margin-top: 2em;
   }
   
   h2 {font-size: 1.3em; }
   
   h3 {font-size: 1.1em;}
+
+  .anchor {
+    float: left;
+    padding-right: 4px;
+    margin-left: -20px;
+    display: none;
+  }
+
+  a.anchor:hover {
+    box-shadow: none;
+    background: none;
+  }
+
+  h1:hover .anchor {
+      display: inline-block;
+  }
+
 
   p.TermNum, p.Terms, p.AltTerms {
     color: #485094;
@@ -126,12 +220,31 @@ html {font-size: 100%;}
     a, a:visited{
         text-decoration: none;
         color: #485094;
-      }
+    }
       
-      a:hover {
+    a:hover {
         color: white;
-        background-color: #b63eee;
+        background: #0f0f0f;
+        box-shadow: 5px 0 0 #0f0f0f, -5px 0 0 #0f0f0f;
+    }
+
+    ::selection {
+        background: #0f0f0f; /* WebKit/Blink Browsers */
+        color: white;
       }
+      ::-moz-selection {
+        background: #0f0f0f; /* Gecko Browsers */
+        color: white;
+      }
+
+      .contact-info a:hover {
+          color: #485094;
+          text-decoration: underline;
+          background: none;
+          box-shadow: 0 0 0 0;
+      }
+
+
       
 /*
     1.3 Lists
@@ -155,6 +268,42 @@ html {font-size: 100%;}
       }
 
 /*
+    1.5 Bibliograhy
+*/
+
+p.Biblio {
+    margin-left: 2em;
+}
+
+/*
+    Contact Info
+*/
+
+.contact-info {
+    font-family: 'Space Mono', monospace;
+    font-weight: 400;
+    background-color: #f7f7f7;
+    color: #b63eee;
+    padding: 2em;
+    margin-top: 5em;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-info .name {
+    font-weight: 700;
+    font-size: 1.2em;
+    margin-bottom:0;
+}
+
+.contact-info .address {
+    font-size: 1em;
+    line-height: 1.3em;
+    margin-top:0;
+}
+
+/*
     2.0 Page header
 */
 
@@ -162,17 +311,25 @@ html {font-size: 100%;}
     2.1 Top Logo
 */
 
+.wrapper-top {
+    background:linear-gradient(65deg,#0f0f0f,#3849e2 );
+    color: white;
+    padding: 2em 0;
+}
+
   .doc-number {
       font-size: 0.5em;
-      padding-top: 2em;
+      font-family: 'Montserrat', sans-serif;
   }
 
   .coverpage-title {
       padding-bottom: 1.5em;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
   }
   
   .WordSection2 {
-    padding: 0 1.5em 0 1.5em;
+    padding: 0 2em 0 3em;
   }
   
   .zzSTDTitle1, .MsoCommentText {
@@ -182,12 +339,16 @@ html {font-size: 100%;}
 
   .coverpage {
     text-align: center;
-    margin: 2em 0;
+  }
+
+  .coverpage-logo span, .coverpage-tc-name span {
+      color: #3849e2;
+      font-family: 'Montserrat', sans-serif;
+      background-color: #fff;
+      padding: 8px ;
   }
   
-  .coverpage-logo, .coverpage-tc-name {
-    color: #b63eee;
-  }
+
   
   .coverpage-tc-name {
     font-size: 1.2em;
@@ -200,31 +361,68 @@ html {font-size: 100%;}
 */
 
   .coverpage-doc-identity {
-    background:linear-gradient(-65deg,#3849e2,#b63eee );
     color: white;
     font-size: 2em;
     line-height: 2em;
-    margin: 1em 0;
   }
   
-  .coverpage-title {
-    font-weight: 400;
-  }
   
   .coverpage-title .title-second {
     display: none;
   }
+
+  .coverpage-stage-block {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.25em;
+    margin: 2em 0 2em 0;
+    text-transform: uppercase;
+  }
+
+  #standard {
+      border-bottom: solid 3px #0ac442;
+  }
+
+  #governance {
+    border-bottom: solid 3px #750697;
+    }
+
+    #guide {
+        border-bottom: solid 3px #48a0e7;
+        }
+
+        .coverpage-maturity {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 400;
+            font-size: 1em;
+            margin: 0 0 2em 0;
+            text-transform: uppercase;
+          }
+
+    #working-draft {
+        border-bottom: solid 3px #fda706;
+        }
+
+    #committee-draft {
+        border-bottom: solid 3px #fda706;
+        }
+
+        #draft-standard {
+            border-bottom: solid 3px #fdf906;
+            }
+
+            #standard {
+                border-bottom: solid 3px #0ac442;
+                }
+
+                #obsolete {
+                    border-bottom: solid 3px #7e0d13;
+                    }
   
 /*
     2.3 Draft Warning
 */
 
-  .coverpage-stage-block {
-    font-style: italic ;
-    font-size: 1.25em;
-    font-weight: 400;
-    margin: 1em 0 2em 0;
-  }
   
   .coverpage-warning {
     border-top: solid 1px #f36f36;
@@ -236,12 +434,13 @@ html {font-size: 100%;}
   
   .coverpage-warning .title {
     color: #f36f36;
-    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1.2em;
   }
+
   
-  .coverpage-warning .content {
-    font-style: italic;
-  }
   
 /*
     2.4 Copyright
@@ -252,10 +451,6 @@ html {font-size: 100%;}
     font-size: 0.8em;
   }
   
-  .copyright .name {
-    font-weight: 400;
-    font-size: 1em;
-  }
   
   .copyright .name, .copyright .address {color: #485094;}
   
@@ -269,18 +464,16 @@ html {font-size: 100%;}
     3.1 Source Code
 */
 
-  .sourcecode {
+  .figure, .Sourcecode {
       font-family: 'Space Mono', monospace;
       background-color: #f7f7f7;
-      color: b63eee;
-      font-size: 0.9em;
+      font-size: 1em;
       line-height: 1.5em;
       padding: 1.5em;
       margin-top: 2em;
+      overflow: auto;
   }
   
-
-
 /*
     3.2 Tables
 */
@@ -289,6 +482,7 @@ table {
     border-collapse: collapse;
     width: 100%;
     font-weight: 300;
+    margin: 2em;
 }
 
 table, th, td {
@@ -309,3 +503,28 @@ p.TableTitle {
     margin-top: 2.5em;
     font-weight: 400;
 }
+
+/*
+To top button
+*/
+
+#myBtn {
+    font-family: 'Space Mono', monospace;
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 12px;
+    border: none;
+    outline: none;
+    background-color: #0f0f0f;
+    opacity: 0.15;
+    color: white;
+    cursor: pointer;
+    padding: 10px 15px 10px 15px;
+    border-radius: 4px;
+  }
+  
+  #myBtn:hover {
+    opacity: 1;
