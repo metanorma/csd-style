@@ -2,8 +2,6 @@
     0 Initialisations
 */
 
-html {font-size: 100%;}
-
 /*
     0.1 Font imports
 */
@@ -18,7 +16,9 @@ html {font-size: 100%;}
     0.2 HTML & Body
 */
 
-  body { 
+html {font-size: 100%;}
+
+  body {
     font-size: 1em;
     margin: 0;
     font-family: 'Open-Sans', sans-serif;
@@ -403,8 +403,18 @@ p.Biblio {
     1.6 Source Code + figures
 */
 
-.figure, .Sourcecode {
+
+/* Some code is generated in <pre> blocks within .figure or .Sourcecode? */
+pre, .figure, .Sourcecode {
     font-family: 'Space Mono', monospace;
+}
+
+/* Reset browser default margins on <pre> */
+pre {
+  margin: 0;
+}
+
+.figure, .Sourcecode {
     background-color: #f7f7f7;
     font-size: 0.8em;
     line-height: 1.6em;
