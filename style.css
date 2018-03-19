@@ -479,11 +479,26 @@ p.TableTitle {
 }
 
 /*
-    Misc.
+  1.10 Footnotes
 */
 
-.blockquote, .formula {
+a.footnote-number {
+    vertical-align: super;
+    font-size: 0.8em;
+}
+
+.footnote {
+    font-size: 0.9em;
+}
+
+
+/*
+    1.11 Blockquotes
+*/
+
+.blockquote {
     background-color: #f7f7f7;
+    font-style: italic;
     width: 80%;
     padding: 1.5em;
     margin-top: 2em;
@@ -491,8 +506,16 @@ p.TableTitle {
     margin-right: auto;
 }
 
-.blockquote {
-    font-style: italic;
+
+/*
+    1.12 Formulas
+*/
+
+.formula {
+    background-color: #f7f7f7;
+    padding: 1.5em;
+    margin-top: 2em;
+    text-align: center;
 }
 
 /*
