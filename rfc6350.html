@@ -6,10 +6,13 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript"  src="https://cdn.rawgit.com/jgallen23/toc/0.3.2/dist/toc.min.js"></script>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css" integrity="sha384-v2Tw72dyUXeU3y4aM2Y0tBJQkGfplr39mxZqlTBDUZAb9BGoC40+rdFCG0m10lXk" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/fontawesome.css" integrity="sha384-q3jl8XQu1OpdLgGFvNRnPdj5VIlCvgsDQTQB6owSOHWlAurxul7f+JpUOVdAiJ5P" crossorigin="anonymous">
   </head>
 
 <body lang="EN-US" link="blue" vlink="#954F72" xml:lang="EN-US" class="container">
-    <div id='toggle'> <span><</span> </div>
+    <div id='toggle'> <span>•</span> </div>
 <header>
     
 <div class="WordSection1">
@@ -117,6 +120,13 @@
 
 </header>
 
+
+<div class="document-type-band" id="standard-band">
+  <p class="document-type">Standard Stage</p></div>
+
+  <div class="document-stage-band" id="working-draft-band">
+      <p class="document-stage">Working Draft</p></div>
+
 <nav>
   <h1 id="content">Contents</h1>
   <div id="toc"></div>
@@ -130,20 +140,28 @@
 <main>
     <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 
-      <div>
-<h1>
-    <a href="#toc0" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg>
-    </a>
-  Foreword</h1>
+
+
+<h1>Other styles</h1>
+
+<p class="figure-title">Figure Title</p>
+
+<div class="blockquote">This is a blockquote. Rerum laborum sit non cum iusto repellendus magnam. Ab illum consectetur voluptatum illo aut. Dolores voluptatem eum aut laudantium eum. Dignissimos ad est voluptate quo quod ut. Sit voluptates non incidunt laborum enim sit consequatur est. Voluptatibus velit inventore </div>
+
+<div class="note">NOTE: This is an example of a note. Rerum laborum sit non cum iusto repellendus magnam. Ab illum consectetur voluptatum illo aut. Dolores voluptatem eum aut laudantium eum.</div>
+
+<div class="example"><p class="example-title">Example</p>This is an example of an example.</div>
+
+<div>
+<h1>Foreword</h1>
+
 <p>TBD</p>
-      </div>
+</div>
 
       <div class="Section3" id="section1">
-<h1>
-    <a href="#toc1" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg>
-    </a>
-  0.<span>&#xA0; </span>Introduction</h1>
-        <p id="_62230e58-b3e3-455e-ac92-51bf83ad91d3">Electronic address books have become ubiquitous.  Their increased
+<h1>0.<span>&#xA0; </span>Introduction</h1>
+
+<p id="_62230e58-b3e3-455e-ac92-51bf83ad91d3">Electronic address books have become ubiquitous.  Their increased
 presence on portable, connected devices as well as the diversity of
 platforms that exchange contact data call for a standard.  This memo
 defines the vCard format, which allows the capture and exchange of
@@ -151,27 +169,29 @@ information normally stored within an address book or directory
 application.</p>
         <p id="_11321122-a8e0-49d0-9294-49a3ff064a81">A high-level overview of the differences from <a href="#RFC2425">IETF RFC 2425</a> and <a href="#RFC2426">IETF RFC 2426</a> can
 be found in <a href="#appendixA">Appendix B</a>.</p>
-        <div id="_conventions">
-<h2>0.1. Conventions</h2>
+        
+
+<div id="_conventions">
+
+  <h2>0.1. Conventions</h2>
+
   <p id="_43e945eb-e8b0-40de-b04b-a282f12d70a1">The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT",
 "SHOULD", "SHOULD NOT", "RECOMMENDED", "NOT RECOMMENDED", "MAY", and
 "OPTIONAL" in this document are to be interpreted as described in
 <a href="#RFC2119">IETF RFC 2119</a>.</p>
 </div>
       </div>
-      <p>&#xA0;</p>
+
     </div>
-    <br clear="all" class="section" />
+
     <div class="WordSection3">
-      <p class="zzSTDTitle1">vCard Format Specification</p>
+
       <div id="_scope">
         
         
-        <h1>
-            <a href="#toc2" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg>
-            </a>
-          1.<span style="mso-tab-count:1">&#xA0; </span>Scope</h1>
-        <p id="_343c9d28-86f5-4c8a-a059-3e0ec62b221e">This document defines the vCard data format for representing and
+<h1>1.<span style="mso-tab-count:1">&#xA0; </span>Scope</h1>
+
+<p id="_343c9d28-86f5-4c8a-a059-3e0ec62b221e">This document defines the vCard data format for representing and
 exchanging a variety of information about individuals and other
 entities (e.g., formatted and structured name and delivery addresses,
 email address, multiple telephone numbers, photograph, logo, audio
@@ -179,8 +199,12 @@ clips, etc.).  This document obsoletes <a href="#RFC2425">IETF RFC 2425</a>, <a 
 updates <a href="#RFC2739">IETF RFC 2739</a>.</p>
       </div>
       <div>
-        <h1>2.<span style="mso-tab-count:1">&#xA0; </span>Normative References</h1>
+        
+  <h1>2.<span style="mso-tab-count:1">&#xA0; </span>Normative References</h1>
+
+
         <p>The following documents are referred to in the text in such a way that some or all of their content constitutes requirements of this document. For dated references, only the edition cited applies. For undated references, the latest edition of the referenced document (including any amendments) applies.</p>
+
         <p id="ISO8601.2000">ISO 8601: 2000, <i> Data elements and interchange formats&#x2009;&#x2014;&#x2009;Information interchange&#x2009;&#x2014;&#x2009;Representation of dates and times.</i></p>
         <p id="ISO8601">ISO 8601: 2004, <i> Data elements and interchange formats&#x2009;&#x2014;&#x2009;Information interchange&#x2009;&#x2014;&#x2009;Representation of dates and times.</i></p>
         <p id="CCITT.X520.1988" class="Biblio">CCITT Recommendation X520, International Telephone and Telegraph Consultative Committee, <i>Information Technology - Open Systems Interconnection - The Directory: Selected Attribute Types.</i> 1988.</p>
@@ -204,22 +228,41 @@ updates <a href="#RFC2739">IETF RFC 2739</a>.</p>
         <p id="W3C.REC-xml-20081126" class="Biblio">W3C REC-xml-20081126, E. Maler, Yergeau, F., Sperberg-McQueen, C., Paoli, J., T. Bray. <i>Extensible Markup Language (XML) 1.0 (Fifth Edition).</i> 2008. <a href="http://www.w3.org/TR/2008/REC-xml-20081126">http://www.w3.org/TR/2008/REC-xml-20081126</a></p>
         <p id="xfn" class="Biblio">XFN, T. Celik, M. Mullenweg, E. Meyer. <i>XFN 1.1 profile.</i> <a href="http://gmpg.org/xfn/11">http://gmpg.org/xfn/11</a></p>
       </div>
-      <div id="_terms_and_definitions"><h1>3.<span style="mso-tab-count:1">&#xA0; </span>Terms and Definitions</h1><p>No terms and definitions are listed in this document.</p>
+
+
+      <div id="_terms_and_definitions">
+        
+      <h1>3.<span style="mso-tab-count:1">&#xA0; </span>Terms and Definitions</h1>
+      
+      <p>No terms and definitions are listed in this document.</p>
 </div>
-      <div id="section3">
-        <h1>4.<span style="mso-tab-count:1">&#xA0; </span>vCard Format Specification</h1>
-        <p id="_0afdd1a4-1c9e-4871-9cdd-a7f02fa4b615">The text/vcard MIME content type (hereafter known as "vCard"; see
+
+
+<div id="section3">
+        
+  
+  <h1>4.<span style="mso-tab-count:1">&#xA0; </span>vCard Format Specification</h1>
+        
+  
+  <p id="_0afdd1a4-1c9e-4871-9cdd-a7f02fa4b615">The text/vcard MIME content type (hereafter known as "vCard"; see
 <a href="#section10_1">11.1</a>) contains contact information, typically pertaining to a
 single contact or group of contacts.  The content consists of one or
 more lines in the format given below.</p>
         <div id="section3_1">
-  <h2>4.1. Charset</h2>
+
+<h2>4.1. Charset</h2>
+
   <p id="_8bfde256-621f-4f54-8840-6bd2524c4fc5">The charset (see <a href="#RFC3536">IETF RFC 3536</a> for internationalization terminology) for
 vCard is UTF-8 as defined in <a href="#RFC3629">IETF RFC 3629</a>.  There is no way to override
 this.  It is invalid to specify a value other than "UTF-8" in the
 "charset" MIME parameter (see <a href="#section10_1">11.1</a>).</p>
 </div>
-        <div id="section3_2"><h2>4.2. Line Delimiting and Folding</h2><p id="_c6185f43-f4f2-41d5-bd33-c5b231a1e1b0">Individual lines within vCard are delimited by the <a href="#RFC5322">IETF RFC 5322</a> line
+        <div id="section3_2">
+          
+          
+<h2>4.2. Line Delimiting and Folding</h2>
+
+<p id="_c6185f43-f4f2-41d5-bd33-c5b231a1e1b0">Individual lines within vCard are delimited by the <a href="#RFC5322">IETF RFC 5322</a> line
 break, which is a CRLF sequence (U+000D followed by U+000A).  Long
 logical lines of text can be split into a multiple-physical-line
 representation using the following folding technique.  Content lines
@@ -262,8 +305,15 @@ in <a href="#RFC5322">IETF RFC 5322</a> only removes the CRLF, not the space fol
 <p id="_aad58d65-a2ba-4d78-9130-c97611d21c2d">Folding is done after any content encoding of a type value.
 Unfolding is done before any decoding of a type value in a content
 line.</p></div>
-        <div id="section3_3"><h2>4.3. ABNF Format Definition</h2><p id="_dabc1a73-2756-47df-a694-1571afa668c3">The following ABNF uses the notation of <a href="#RFC5234">IETF RFC 5234</a>, which also defines
+
+
+  <div id="section3_3">
+    
+<h2>4.3. ABNF Format Definition</h2>
+      
+      <p id="_dabc1a73-2756-47df-a694-1571afa668c3">The following ABNF uses the notation of <a href="#RFC5234">IETF RFC 5234</a>, which also defines
 CRLF, WSP, DQUOTE, VCHAR, ALPHA, and DIGIT.</p>
+
 <p id="_8f0b0622-f0a9-4344-bc92-a1ea47c72298" class="Sourcecode">vcard-entity&#xA0;=&#xA0;1*vcard<br /><br />vcard&#xA0;=&#xA0;"BEGIN:VCARD"&#xA0;CRLF<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;"VERSION:4.0"&#xA0;CRLF<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;1*contentline<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;"END:VCARD"&#xA0;CRLF<br />&#xA0;&#xA0;;&#xA0;A&#xA0;vCard&#xA0;object&#xA0;MUST&#xA0;include&#xA0;the&#xA0;VERSION&#xA0;and&#xA0;FN&#xA0;properties.<br />&#xA0;&#xA0;;&#xA0;VERSION&#xA0;MUST&#xA0;come&#xA0;immediately&#xA0;after&#xA0;BEGIN:VCARD.<br /><br />contentline&#xA0;=&#xA0;[group&#xA0;"."]&#xA0;name&#xA0;*(";"&#xA0;param)&#xA0;":"&#xA0;value&#xA0;CRLF<br />&#xA0;&#xA0;;&#xA0;When&#xA0;parsing&#xA0;a&#xA0;content&#xA0;line,&#xA0;folded&#xA0;lines&#xA0;must&#xA0;first<br />&#xA0;&#xA0;;&#xA0;be&#xA0;unfolded&#xA0;according&#xA0;to&#xA0;the&#xA0;unfolding&#xA0;procedure<br />&#xA0;&#xA0;;&#xA0;described&#xA0;in&#xA0;Section&#xA0;3.2.<br />&#xA0;&#xA0;;&#xA0;When&#xA0;generating&#xA0;a&#xA0;content&#xA0;line,&#xA0;lines&#xA0;longer&#xA0;than&#xA0;75<br />&#xA0;&#xA0;;&#xA0;characters&#xA0;SHOULD&#xA0;be&#xA0;folded&#xA0;according&#xA0;to&#xA0;the&#xA0;folding<br />&#xA0;&#xA0;;&#xA0;procedure&#xA0;described&#xA0;in&#xA0;Section&#xA0;3.2.<br /><br />group&#xA0;=&#xA0;1*(ALPHA&#xA0;/&#xA0;DIGIT&#xA0;/&#xA0;"-")<br />name&#xA0;&#xA0;=&#xA0;"SOURCE"&#xA0;/&#xA0;"KIND"&#xA0;/&#xA0;"FN"&#xA0;/&#xA0;"N"&#xA0;/&#xA0;"NICKNAME"<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;/&#xA0;"PHOTO"&#xA0;/&#xA0;"BDAY"&#xA0;/&#xA0;"ANNIVERSARY"&#xA0;/&#xA0;"GENDER"&#xA0;/&#xA0;"ADR"&#xA0;/&#xA0;"TEL"<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;/&#xA0;"EMAIL"&#xA0;/&#xA0;"IMPP"&#xA0;/&#xA0;"LANG"&#xA0;/&#xA0;"TZ"&#xA0;/&#xA0;"GEO"&#xA0;/&#xA0;"TITLE"&#xA0;/&#xA0;"ROLE"<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;/&#xA0;"LOGO"&#xA0;/&#xA0;"ORG"&#xA0;/&#xA0;"MEMBER"&#xA0;/&#xA0;"RELATED"&#xA0;/&#xA0;"CATEGORIES"<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;/&#xA0;"NOTE"&#xA0;/&#xA0;"PRODID"&#xA0;/&#xA0;"REV"&#xA0;/&#xA0;"SOUND"&#xA0;/&#xA0;"UID"&#xA0;/&#xA0;"CLIENTPIDMAP"<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;/&#xA0;"URL"&#xA0;/&#xA0;"KEY"&#xA0;/&#xA0;"FBURL"&#xA0;/&#xA0;"CALADRURI"&#xA0;/&#xA0;"CALURI"&#xA0;/&#xA0;"XML"<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;/&#xA0;iana-token&#xA0;/&#xA0;x-name<br />&#xA0;&#xA0;;&#xA0;Parsing&#xA0;of&#xA0;the&#xA0;param&#xA0;and&#xA0;value&#xA0;is&#xA0;based&#xA0;on&#xA0;the&#xA0;"name"&#xA0;as<br />&#xA0;&#xA0;;&#xA0;defined&#xA0;in&#xA0;ABNF&#xA0;sections&#xA0;below.<br />&#xA0;&#xA0;;&#xA0;Group&#xA0;and&#xA0;name&#xA0;are&#xA0;case-insensitive.<br /><br />iana-token&#xA0;=&#xA0;1*(ALPHA&#xA0;/&#xA0;DIGIT&#xA0;/&#xA0;"-")<br />&#xA0;&#xA0;;&#xA0;identifier&#xA0;registered&#xA0;with&#xA0;IANA<br /><br />x-name&#xA0;=&#xA0;"x-"&#xA0;1*(ALPHA&#xA0;/&#xA0;DIGIT&#xA0;/&#xA0;"-")<br />&#xA0;&#xA0;;&#xA0;Names&#xA0;that&#xA0;begin&#xA0;with&#xA0;"x-"&#xA0;or&#xA0;"X-"&#xA0;are<br />&#xA0;&#xA0;;&#xA0;reserved&#xA0;for&#xA0;experimental&#xA0;use,&#xA0;not&#xA0;intended&#xA0;for&#xA0;released<br />&#xA0;&#xA0;;&#xA0;products,&#xA0;or&#xA0;for&#xA0;use&#xA0;in&#xA0;bilateral&#xA0;agreements.<br /><br />param&#xA0;=&#xA0;language-param&#xA0;/&#xA0;value-param&#xA0;/&#xA0;pref-param&#xA0;/&#xA0;pid-param<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;/&#xA0;type-param&#xA0;/&#xA0;geo-parameter&#xA0;/&#xA0;tz-parameter&#xA0;/&#xA0;sort-as-param<br />&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;/&#xA0;calscale-param&#xA0;/&#xA0;any-param<br />&#xA0;&#xA0;;&#xA0;Allowed&#xA0;parameters&#xA0;depend&#xA0;on&#xA0;property&#xA0;name.<br /><br />param-value&#xA0;=&#xA0;*SAFE-CHAR&#xA0;/&#xA0;DQUOTE&#xA0;*QSAFE-CHAR&#xA0;DQUOTE<br /><br />any-param&#xA0;&#xA0;=&#xA0;(iana-token&#xA0;/&#xA0;x-name)&#xA0;"="&#xA0;param-value&#xA0;*(","&#xA0;param-value)<br /><br />NON-ASCII&#xA0;=&#xA0;UTF8-2&#xA0;/&#xA0;UTF8-3&#xA0;/&#xA0;UTF8-4<br />&#xA0;&#xA0;;&#xA0;UTF8-{2,3,4}&#xA0;are&#xA0;defined&#xA0;in&#xA0;IETF&#xA0;RFC&#xA0;3629<br /><br />QSAFE-CHAR&#xA0;=&#xA0;WSP&#xA0;/&#xA0;"!"&#xA0;/&#xA0;%x23-7E&#xA0;/&#xA0;NON-ASCII<br />&#xA0;&#xA0;;&#xA0;Any&#xA0;character&#xA0;except&#xA0;CTLs,&#xA0;DQUOTE<br /><br />SAFE-CHAR&#xA0;=&#xA0;WSP&#xA0;/&#xA0;"!"&#xA0;/&#xA0;%x23-39&#xA0;/&#xA0;%x3C-7E&#xA0;/&#xA0;NON-ASCII<br />&#xA0;&#xA0;;&#xA0;Any&#xA0;character&#xA0;except&#xA0;CTLs,&#xA0;DQUOTE,&#xA0;";",&#xA0;":"<br /><br />VALUE-CHAR&#xA0;=&#xA0;WSP&#xA0;/&#xA0;VCHAR&#xA0;/&#xA0;NON-ASCII<br />&#xA0;&#xA0;;&#xA0;Any&#xA0;textual&#xA0;character</p>
 <p id="_d0d91c61-6e83-463c-bad0-91ad9f7a78f3">A line that begins with a white space character is a continuation of
 the previous line, as described in <a href="#section3_2">4.2</a>.  The white space
@@ -2505,22 +2555,22 @@ property&#x2019;s content.</p>
   //TOC toggle animation
 $('#toggle').on('click', function(){
     if( $('nav').is(':visible') ) {
-        $('nav').animate({ 'left': '-293px' }, 'slow', function(){
+        $('nav').animate({ 'left': '-353px' }, 'slow', function(){
             $('nav').hide();
         });
-        $('.container').animate({ 'padding-left': '0px' }, 'slow');
+        $('.container').animate({ 'padding-left': '61px' }, 'slow');
         $('#toggle-icon').animate({ 'transform': 'rotate(180deg)' }, 'slow');
     }
     else {
         $('nav').show();
         $('nav').animate({ 'left': '0px' }, 'slow');
-        $('.container').animate({ 'padding-left': '320px' }, 'slow');
+        $('.container').animate({ 'padding-left': '380px' }, 'slow');
         $('#toggle-icon').animate({ 'transform': 'rotate(180deg)' }, 'slow');
     }
 });
 </script>
 
-<script>
+<!--script>
   //TOC toggle rotation
   $(document).ready(function() {
 
@@ -2543,7 +2593,7 @@ $('#toggle').click(function rotateMe(e) {
 
 });
 
-</script>
+</script-->
 
 <script>
     // Scroll to top button
@@ -2570,6 +2620,17 @@ $('#toggle').click(function rotateMe(e) {
       delimiters: [['(#(', ')#)']]
     }
  });
+</script>
+
+<script>
+  $(document).ready(function() {
+	  $('[id^=toc]').each(function ()
+	  {
+	     var currentToc = $(this);
+       var url = window.location.href;
+	     currentToc.wrap("<a href='" + url + "#" + currentToc.attr("id") + "' </a>");
+	  });
+});
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=AM_HTMLorMML"></script>
 </body>

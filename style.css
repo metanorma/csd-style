@@ -8,9 +8,10 @@ html {font-size: 100%;}
     0.1 Font imports
 */
 
-@import url('https://fonts.googleapis.com/css?family=Montserrat:700,900');
+
 @import url('https://fonts.googleapis.com/css?family=Space+Mono:400,700');
 @import url('https://fonts.googleapis.com/css?family=Merriweather:400,400i,700');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600');
 
  
 /*
@@ -20,21 +21,22 @@ html {font-size: 100%;}
   body { 
     font-size: 1em;
     margin: 0;
-    font-family: 'Merriweather', serif;
+    font-family: 'Open-Sans', sans-serif;
     font-weight: 400;
     font-size: 15px;
-    line-height: 1.7em;
+    line-height: 1.4em;
     margin-left: auto;
     margin-right: auto;
     max-width: 100%;
-    color: #0f0f0f;
+    color: #1d1d1d;
     background-color: #ffffff;
   }
 
-  main {margin: 0 3em 0 4em;}
+  main {margin: 0 3em 0 6em;}
 
   #toc{
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Open-Sans', sans-serif;
+    font-weight: 600;
   }
 
 /*
@@ -47,35 +49,36 @@ html {font-size: 100%;}
         top: 0;
         bottom: 0;
         left: 0;
-        width: 293px;
+        width: 323px;
         font-size: 0.9em;
         overflow: auto;
-        padding: 0 0 0 2em;
+        padding: 0 0 0 75px;
+        margin-right: 30px;
         background-color:#f7f7f7; 
     }
 
     #toggle {
         position: fixed;
         height: 100%;
-        width: 20px;
-        padding:3px;
-        text-align: center;
-        background-color:#0f0f0f;
+        width: 30px;
+        background-color:#1d1d1d;
         color: white!important;
         cursor: pointer;
+        z-index: 100;
     }
 
     #toggle span {
-
+        text-align: center;
+        width: 100%;
         position: absolute;             
         top: 50%;
-
-        transform: translate(0, -50%)
+        transform: translate(0, -50%);
+        
     }
 
 
     .container {
-        padding-left: 320px;
+        padding-left: 380px;
     }
 
     .rule.toc {
@@ -134,14 +137,141 @@ html {font-size: 100%;}
 }
 
 #toc .toc-active, #toc li:hover {
-    background: #0f0f0f;
-    box-shadow: inset -5px 0px 10px -5px #0f0f0f!important;
+    background: #1d1d1d;
+    box-shadow: inset -5px 0px 10px -5px #1d1d1d!important;
+
 }
 
 #toc li:hover a {
     color: white;
 }
 
+/*
+    Document types + stages
+*/
+
+.document-type-band {
+    left:0;
+    top:0;
+    height: 100%;
+    position: fixed;
+    z-index: 99;
+    box-shadow: -5px 0px 10px #1d1d1d
+
+}
+
+.document-stage-band {
+    left:30px;
+    top:0;
+    height: 100%;
+    position: fixed;
+    z-index: 98;
+    box-shadow: -5px 0px 10px #1d1d1d
+}
+
+.document-type {
+    position: relative;
+    width: 25px;
+}
+
+.document-stage {
+    position: relative;
+    width: 25px;
+}
+
+p.document-type, p.document-stage {
+    color: white;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    margin:0;
+    margin-left: 6px;
+    writing-mode:tb-rl;
+	-webkit-transform:rotate(180deg);
+	-moz-transform:rotate(180deg);
+	-o-transform: rotate(180deg);
+	white-space:nowrap;
+	display:block;
+    bottom:0;
+	height:160px;
+}
+
+p.document-type {
+    font-weight: 700;
+}
+
+#standard-band {
+    background-color: #0ac442;
+}
+
+#standard {
+    border-bottom: solid 3px #0ac442;
+}
+
+#governance {
+    border-bottom: solid 3px #750697;
+}
+
+#governance-band {
+    background-color: #750697;
+}
+
+#guide {
+    border-bottom: solid 3px #48a0e7;
+}
+
+#guide-band {
+    background-color: #48a0e7;
+}
+
+.coverpage-maturity {
+    font-family: 'Open-Sans', sans-serif;
+    font-weight: 400;
+    font-size: 1em;
+    margin: 0 0 2em 0;
+    text-transform: uppercase;
+    }
+
+#working-draft {
+    border-bottom: solid 3px #fda706;
+}
+
+#working-draft-band {
+    background-color: #fda706;
+}
+
+#committee-draft {
+    border-bottom: solid 3px #fd06fd;
+}
+
+#committee-draft-band {
+    background-color: #fd06fd;
+}
+
+#draft-standard {
+    border-bottom: solid 3px #fdf906;
+}
+
+#draft-standard {
+    border-bottom: solid 3px #fdf906;
+}
+
+#standard {
+    border-bottom: solid 3px #0ac442;
+}
+
+#standard-band {
+    background-color: #0ac442;
+}
+
+#obsolete {
+    border-bottom: solid 3px #7e0d13;
+}
+
+#obsolete-band {
+    background-color: #7e0d13;
+}
 
 /*
     1. TYPOGRAPHY
@@ -152,17 +282,16 @@ html {font-size: 100%;}
 */
   
   h1,h2,h3,h4,h5,h6 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Open-Sans', sans-serif;
     color: #485094;
-    font-weight: 900;
+    font-weight: 600;
     margin-top: 2em;
   }
 
   h1 {
     font-size: 1.4em; 
-    letter-spacing: 0.1em;
     text-transform: uppercase;
-    margin-top: 4em;
+    margin-top: 2em;
   }
 
   h1#content {
@@ -173,22 +302,16 @@ html {font-size: 100%;}
   
   h3 {font-size: 1.1em;}
 
-  .anchor {
+  span[id^="toc"]:after {
     float: left;
     padding-right: 4px;
     margin-left: -20px;
-    display: none;
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900; 
+    font-size: 0.8em;
+    color: #cfcfcf;
+    content: "\f0c1";
   }
-
-  a.anchor:hover {
-    box-shadow: none;
-    background: none;
-  }
-
-  h1:hover .anchor {
-      display: inline-block;
-  }
-
 
   p.TermNum, p.Terms, p.AltTerms {
     color: #485094;
@@ -224,16 +347,17 @@ html {font-size: 100%;}
       
     a:hover {
         color: white;
-        background: #0f0f0f;
-        box-shadow: 5px 0 0 #0f0f0f, -5px 0 0 #0f0f0f;
+        background: #1d1d1d;
+        box-shadow: 3px 0 0 #1d1d1d, -3px 0 0 #1d1d1d;
+        /* padding: 2px 0 2px 0; */
     }
 
     ::selection {
-        background: #0f0f0f; /* WebKit/Blink Browsers */
+        background: #1d1d1d; /* WebKit/Blink Browsers */
         color: white;
       }
       ::-moz-selection {
-        background: #0f0f0f; /* Gecko Browsers */
+        background: #1d1d1d; /* Gecko Browsers */
         color: white;
       }
 
@@ -276,6 +400,102 @@ p.Biblio {
 }
 
 /*
+    1.6 Source Code + figures
+*/
+
+.figure, .Sourcecode {
+    font-family: 'Space Mono', monospace;
+    background-color: #f7f7f7;
+    font-size: 0.8em;
+    line-height: 1.6em;
+    padding: 1.5em;
+    margin-top: 2em;
+    overflow: auto;
+}
+
+.figure-title {
+    font-weight: 700;
+    font-size: 1em;
+    text-align: center;
+}
+
+/*
+    1.7 Notes
+*/
+
+.note {
+    background-color: #fff495;
+    color: #47430c;
+    padding: 1.2em;
+    margin-top: 2em;
+}
+
+/*
+    1.8 Examples
+*/
+
+.example {
+    background-color: #e1eef1;
+    padding: 1.2em;
+    margin-top: 2em;
+}
+
+.example .example-title {
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top:0;
+}
+
+/*
+  1.9 Tables
+*/
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  font-weight: 300;
+  margin: 1em 2em 2em 2em;
+  padding-right: 2em;
+}
+
+table, th, td {
+  border: 1px solid black;
+  font-size: 0.95em;
+}
+
+td, th {
+  padding: 1em;
+}
+
+td.header {
+  font-weight: 400;
+}
+
+p.TableTitle {
+  text-align: center;
+  margin-top: 2.5em;
+  font-weight: 400;
+}
+
+/*
+    Misc.
+*/
+
+.blockquote, .formula {
+    background-color: #f7f7f7;
+    width: 80%;
+    padding: 1.5em;
+    margin-top: 2em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.blockquote {
+    font-style: italic;
+}
+
+/*
     Contact Info
 */
 
@@ -312,20 +532,21 @@ p.Biblio {
 */
 
 .wrapper-top {
-    background:linear-gradient(65deg,#0f0f0f,#3849e2 );
-    color: white;
+    background-color:#485094;
+    color: #ffffff;
     padding: 2em 0;
 }
 
   .doc-number {
       font-size: 0.5em;
-      font-family: 'Montserrat', sans-serif;
+      font-family: 'Open-Sans', sans-serif;
   }
 
   .coverpage-title {
-      padding-bottom: 1.5em;
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 900;
+      padding-bottom: 1em;
+      font-family: 'Open-Sans', sans-serif;
+      font-size: 1.5em;
+      font-weight: 400;
   }
   
   .WordSection2 {
@@ -342,10 +563,8 @@ p.Biblio {
   }
 
   .coverpage-logo span, .coverpage-tc-name span {
-      color: #3849e2;
-      font-family: 'Montserrat', sans-serif;
-      background-color: #fff;
-      padding: 8px ;
+      font-family: 'Open-Sans', sans-serif;
+      text-transform: uppercase;
   }
   
 
@@ -361,7 +580,6 @@ p.Biblio {
 */
 
   .coverpage-doc-identity {
-    color: white;
     font-size: 2em;
     line-height: 2em;
   }
@@ -372,52 +590,14 @@ p.Biblio {
   }
 
   .coverpage-stage-block {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Open-Sans', sans-serif;
     font-weight: 700;
     font-size: 1.25em;
     margin: 2em 0 2em 0;
     text-transform: uppercase;
   }
 
-  #standard {
-      border-bottom: solid 3px #0ac442;
-  }
-
-  #governance {
-    border-bottom: solid 3px #750697;
-    }
-
-    #guide {
-        border-bottom: solid 3px #48a0e7;
-        }
-
-        .coverpage-maturity {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 400;
-            font-size: 1em;
-            margin: 0 0 2em 0;
-            text-transform: uppercase;
-          }
-
-    #working-draft {
-        border-bottom: solid 3px #fda706;
-        }
-
-    #committee-draft {
-        border-bottom: solid 3px #fda706;
-        }
-
-        #draft-standard {
-            border-bottom: solid 3px #fdf906;
-            }
-
-            #standard {
-                border-bottom: solid 3px #0ac442;
-                }
-
-                #obsolete {
-                    border-bottom: solid 3px #7e0d13;
-                    }
+  
   
 /*
     2.3 Draft Warning
@@ -434,7 +614,7 @@ p.Biblio {
   
   .coverpage-warning .title {
     color: #f36f36;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Open-Sans', sans-serif;
     font-weight: 700;
     text-transform: uppercase;
     font-size: 1.2em;
@@ -460,49 +640,7 @@ p.Biblio {
     3.0 Other styles
 */
 
-/*
-    3.1 Source Code
-*/
 
-  .figure, .Sourcecode {
-      font-family: 'Space Mono', monospace;
-      background-color: #f7f7f7;
-      font-size: 1em;
-      line-height: 1.5em;
-      padding: 1.5em;
-      margin-top: 2em;
-      overflow: auto;
-  }
-  
-/*
-    3.2 Tables
-*/
-
-table {
-    border-collapse: collapse;
-    width: 100%;
-    font-weight: 300;
-    margin: 2em;
-}
-
-table, th, td {
-    border: 1px solid black;
-    font-size: 1em;
-}
-
-td, th {
-    padding: 1em;
-}
-
-td.header {
-    font-weight: 400;
-}
-
-p.TableTitle {
-    text-align: center;
-    margin-top: 2.5em;
-    font-weight: 400;
-}
 
 /*
 To top button
@@ -518,7 +656,7 @@ To top button
     font-size: 12px;
     border: none;
     outline: none;
-    background-color: #0f0f0f;
+    background-color: #1d1d1d;
     opacity: 0.15;
     color: white;
     cursor: pointer;
