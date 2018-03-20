@@ -1,19 +1,40 @@
 <?xml version="1.0"?>
 <!DOCTYPE html SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns:epub="http://www.idpf.org/2007/ops">
-  <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>rfc6350</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!--TOC script import-->
     <script type="text/javascript"  src="https://cdn.rawgit.com/jgallen23/toc/0.3.2/dist/toc.min.js"></script>
 
+    <!--Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i|Space+Mono:400,700" rel="stylesheet"> 
+    <!--Font awesome import for the link icon-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css" integrity="sha384-v2Tw72dyUXeU3y4aM2Y0tBJQkGfplr39mxZqlTBDUZAb9BGoC40+rdFCG0m10lXk" crossorigin="anonymous">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/fontawesome.css" integrity="sha384-q3jl8XQu1OpdLgGFvNRnPdj5VIlCvgsDQTQB6owSOHWlAurxul7f+JpUOVdAiJ5P" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/fontawesome.css" integrity="sha384-q3jl8XQu1OpdLgGFvNRnPdj5VIlCvgsDQTQB6owSOHWlAurxul7f+JpUOVdAiJ5P" crossorigin="anonymous">
   </head>
 
+
+
 <body lang="EN-US" link="blue" vlink="#954F72" xml:lang="EN-US" class="container">
-    <div id='toggle'> <span>•</span> </div>
-<header>
+
+
+<div class="document-stage-band" id="working-draft-band">
+    <p class="document-stage">Working Draft</p>
+</div>
+
+<div class="document-type-band" id="standard-band">
+    <p class="document-type">Calconnect Standard</p>
+</div>
+  
+    
+
+  <div id='toggle'> <span>•</span> </div>
+
+  <header>
     
 <div class="WordSection1">
   <div class="coverpage">
@@ -42,15 +63,15 @@
   </div>
 
   <div class="coverpage-stage-block" >
-    <span class="coverpage-stage" id="standard">Standard Stage</span>
+    <span class="coverpage-stage" id="standard">Calconnect Stage</span>
   </div>
 
   <div class="coverpage-stage-block" >
-      <span class="coverpage-stage" id="governance">Governance Stage</span>
+      <span class="coverpage-stage" id="governance">Calconnect Governance</span>
     </div>
 
     <div class="coverpage-stage-block" >
-        <span class="coverpage-stage" id="guide">Guide Stage</span>
+        <span class="coverpage-stage" id="guide">Calconnect Guide</span>
       </div>
 
       <div class="coverpage-stage-block" >
@@ -121,12 +142,6 @@
 </header>
 
 
-<div class="document-type-band" id="standard-band">
-  <p class="document-type">Standard Stage</p></div>
-
-  <div class="document-stage-band" id="working-draft-band">
-      <p class="document-stage">Working Draft</p></div>
-
 <nav>
   <h1 id="content">Contents</h1>
   <div id="toc"></div>
@@ -186,9 +201,9 @@ be found in <a href="#appendixA">Appendix B</a>.</p>
 
   <h2>0.1. Conventions</h2>
 
-  <p id="_43e945eb-e8b0-40de-b04b-a282f12d70a1">The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT",
-"SHOULD", "SHOULD NOT", "RECOMMENDED", "NOT RECOMMENDED", "MAY", and
-"OPTIONAL" in this document are to be interpreted as described in
+  <p id="_43e945eb-e8b0-40de-b04b-a282f12d70a1">The key words <span class="keyword">"MUST"</span>, <span class="keyword">"MUST NOT"</span>, <span class="keyword">"REQUIRED"</span>, <span class="keyword">"SHALL"</span>, <span class="keyword">"SHALL NOT"</span>,
+    <span class="keyword">"SHOULD"</span>, <span class="keyword">"SHOULD NOT"</span>, <span class="keyword">"RECOMMENDED"</span>, <span class="keyword">"NOT RECOMMENDED"</span>, <span class="keyword">"MAY"</span>, and
+    <span class="keyword">"OPTIONAL"</span> in this document are to be interpreted as described in
 <a href="#RFC2119">IETF RFC 2119</a>.</p>
 </div>
       </div>
@@ -2542,7 +2557,7 @@ property&#x2019;s content.</p>
   <script>
     //TOC generation
       $('#toc').toc({
-          'selectors': 'h1,h2', //elements to use as headings
+          'selectors': 'h1,h2,h3', //elements to use as headings
           'container': 'main', //element to find all selectors in
           'smoothScrolling': true, //enable or disable smooth scrolling on click
           'prefix': 'toc', //prefix for anchor tags and class names
@@ -2569,42 +2584,15 @@ $('#toggle').on('click', function(){
         $('nav').animate({ 'left': '-353px' }, 'slow', function(){
             $('nav').hide();
         });
-        $('.container').animate({ 'padding-left': '61px' }, 'slow');
-        $('#toggle-icon').animate({ 'transform': 'rotate(180deg)' }, 'slow');
+        $('.container').animate({ 'padding-left': '31px' }, 'slow');
     }
     else {
         $('nav').show();
         $('nav').animate({ 'left': '0px' }, 'slow');
-        $('.container').animate({ 'padding-left': '380px' }, 'slow');
-        $('#toggle-icon').animate({ 'transform': 'rotate(180deg)' }, 'slow');
+        $('.container').animate({ 'padding-left': '360px' }, 'slow');
     }
 });
 </script>
-
-<!--script>
-  //TOC toggle rotation
-  $(document).ready(function() {
-
-
-var degrees = 0;
-$('#toggle').click(function rotateMe(e) {
-
-  degrees += 180;
-
-  $('#toggle').css({
-
-    'transform': 'rotate(' + degrees + 'deg)',
-    '-ms-transform': 'rotate(' + degrees + 'deg)',
-    '-moz-transform': 'rotate(' + degrees + 'deg)',
-    '-webkit-transform': 'rotate(' + degrees + 'deg)',
-    '-o-transform': 'rotate(' + degrees + 'deg)'
-  });
-
-})
-
-});
-
-</script-->
 
 <script>
     // Scroll to top button
@@ -2643,6 +2631,8 @@ $('#toggle').click(function rotateMe(e) {
 	  });
 });
 </script>
+
+
 
 </body>
 </html>
