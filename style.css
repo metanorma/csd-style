@@ -24,7 +24,7 @@ time, mark, audio, video {
 	padding: 0;
 	border: 0;
 	font-size: 100%;
-	font-family: 'Open-Sans', sans-serif;
+	font-family: 'Overpass', sans-serif;
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
@@ -71,7 +71,7 @@ table {
   main {margin: 0 3em 0 6em;}
 
   #toc{
-    font-family: 'Open-Sans', sans-serif;
+    font-family: 'Overpass', sans-serif;
     font-weight: 400;
   }
 
@@ -274,7 +274,7 @@ p.document-stage {
 }
 
 .coverpage-maturity {
-    font-family: 'Open-Sans', sans-serif;
+    font-family: 'Overpass', sans-serif;
     font-weight: 400;
     font-size: 1em;
     margin: 0 0 2em 0;
@@ -330,9 +330,9 @@ p.document-stage {
 */
   
   h1,h2,h3,h4,h5,h6 {
-    font-family: 'Open-Sans', sans-serif;
-    color: #485094;
-    font-weight: 400;
+    font-family: 'Overpass', sans-serif;
+    color: #0e1a85;
+    font-weight: 600;
     margin-top: 2em;
     margin-bottom: 0.3em;
   }
@@ -438,7 +438,7 @@ p.document-stage {
     .rule {
         width: 100%;
         height: 1px;
-        background-color: #485094;
+        background-color: #0e1a85;
         margin: 2em 0;
       }
 
@@ -447,6 +447,7 @@ p.document-stage {
 */
 
 p.Biblio {
+    margin-top: 1em;
     margin-left: 2em;
 }
 
@@ -575,12 +576,12 @@ a.footnote-number {
 
 .contact-info {
     background-color: #f7f7f7;
-    color: #b63eee;
     padding: 2em;
     margin-top: 5em;
     width: auto;
     margin-left: auto;
     margin-right: auto;
+    text-align: left;
 }
 
 .contact-info p, .contact-info a {
@@ -617,21 +618,22 @@ span.keyword {
 */
 
 .wrapper-top {
-    background-color:#485094;
+    background-color:#0e1a85;
+    background-image: url("img/dots@2x.png");
     color: #ffffff;
     padding: 2em 0;
 }
 
   .doc-number {
       font-size: 0.5em;
-      font-family: 'Open-Sans', sans-serif;
+      font-family: 'Overpass', sans-serif;
   }
 
   .coverpage-title {
-      padding-bottom: 1em;
-      font-family: 'Open-Sans', sans-serif;
+      padding-bottom: 0.5em;
+      font-family: 'Overpass', sans-serif;
       font-size: 1.5em;
-      font-weight: 400;
+      font-weight: 900;
   }
   
   .WordSection2 {
@@ -648,11 +650,10 @@ span.keyword {
   }
 
   .coverpage-logo span, .coverpage-tc-name span {
-      font-family: 'Open-Sans', sans-serif;
+    font-family: 'Overpass', sans-serif;
       text-transform: uppercase;
+      font-weight: 600;
   }
-  
-
   
   .coverpage-tc-name {
     font-size: 1.2em;
@@ -675,12 +676,13 @@ span.keyword {
   }
 
   .coverpage-stage-block {
-    font-family: 'Open-Sans', sans-serif;
+    font-family: 'Overpass', sans-serif;
     font-weight: 700;
     font-size: 1.25em;
-    margin: 2em 0 2em 0;
+    margin: 2em 0em 2em 0em;
     text-transform: uppercase;
   }
+
 
   
   
@@ -699,7 +701,7 @@ span.keyword {
   
   .coverpage-warning .title {
     color: #f36f36;
-    font-family: 'Open-Sans', sans-serif;
+    font-family: 'Overpass', sans-serif;
     font-weight: 700;
     text-transform: uppercase;
     font-size: 1.2em;
@@ -714,6 +716,7 @@ span.keyword {
   .copyright {
     padding: 1em;
     font-size: 0.8em;
+    text-align: left;
   }
   
   
