@@ -507,7 +507,9 @@ table {
   border-collapse: collapse;
   width: 100%;
   font-weight: 300;
-  margin: 1em 2em 2em 2em;
+  margin: 1em 0 2em 0;
+  margin-left: auto;
+  margin-right: auto;
   padding-right: 2em;
 }
 
@@ -607,6 +609,15 @@ a.footnote-number {
 
 span.keyword {
     font-weight: 600;
+}
+
+/*
+    Paragraphs
+*/
+
+p {
+    margin-top: 1em;
+    margin-bottom: 1em;
 }
 
 /*
