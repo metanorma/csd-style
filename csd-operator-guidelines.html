@@ -1,0 +1,1388 @@
+<?xml version="1.0"?>
+<!DOCTYPE html SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:epub="http://www.idpf.org/2007/ops">
+  <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>csd-operator-guidelines</title><style>
+  <!--
+/*
+    0 CSS RESET
+*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-family: "Overpass", sans-serif;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/*
+    1. HTML & Body
+*/
+body {
+  margin: 0;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  color: #1d1d1d;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 1.4em;
+  background-color: #ffffff; }
+
+main {
+  margin: 0 3em 0 6em; }
+
+#toc {
+  font-family: "Overpass", sans-serif;
+  font-weight: 400; }
+
+/*
+    2. Responsive navigation layout
+*/
+@media (min-width: 768px) {
+  nav {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 323px;
+    font-size: 0.9em;
+    overflow: auto;
+    padding: 0 0 0 45px;
+    margin-right: 30px;
+    background-color: #f7f7f7; }
+
+  #toggle {
+    position: fixed;
+    height: 100%;
+    width: 30px;
+    background-color: #1d1d1d;
+    color: white !important;
+    cursor: pointer;
+    z-index: 100; }
+
+  #toggle span {
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%); }
+
+  .container {
+    padding-left: 360px; }
+
+  .rule.toc {
+    display: none; }
+
+  h1.toc-contents {
+    margin-top: 1em; }
+
+  ul#toc-list {
+    padding: 0;
+    margin: 0; } }
+@media (max-width: 768px) {
+  #toc {
+    padding: 0 1.5em 0 1.5em;
+    overflow: visible; } }
+#toc ul {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+#toc li {
+  padding: 5px 10px; }
+
+#toc a {
+  color: #485094;
+  text-decoration: none;
+  display: block; }
+
+#toc a:hover {
+  color: white; }
+
+#toc .h2 {
+  padding-left: 30px; }
+
+#toc .h3 {
+  padding-left: 50px; }
+
+#toc .toc-active a {
+  color: white; }
+
+#toc .toc-active, #toc li:hover {
+  background: #1d1d1d;
+  box-shadow: inset -5px 0px 10px -5px #1d1d1d !important; }
+
+#toc li:hover a {
+  color: white; }
+
+/*
+    Document types + stages
+*/
+.document-type-band {
+  left: 0;
+  top: 180px;
+  height: 100%;
+  position: fixed;
+  display: block;
+  z-index: 99;
+  /*box-shadow: -5px 0px 10px #1d1d1d*/ }
+
+.document-stage-band {
+  left: 0;
+  top: 0;
+  height: 100%;
+  position: fixed;
+  display: block;
+  z-index: 98;
+  box-shadow: -5px 0px 10px #1d1d1d; }
+
+.document-type {
+  position: relative;
+  width: 25px; }
+
+.document-stage {
+  position: relative;
+  width: 25px; }
+
+p.document-type, p.document-stage {
+  color: white;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  margin: 0;
+  margin-left: 6px;
+  writing-mode: tb-rl;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  white-space: nowrap;
+  display: block;
+  bottom: 0; }
+
+p.document-type {
+  font-weight: 400;
+  height: 210px; }
+
+#governance-band p.document-type {
+  font-weight: 400;
+  height: 230px !important; }
+
+p.document-stage {
+  font-weight: 300;
+  height: 160px; }
+
+#standard-band {
+  background-color: #0ac442; }
+
+#standard {
+  border-bottom: solid 3px #0ac442; }
+
+#governance {
+  border-bottom: solid 3px #750697; }
+
+#governance-band {
+  background-color: #750697; }
+
+#guide {
+  border-bottom: solid 3px #48a0e7; }
+
+#guide-band {
+  background-color: #48a0e7; }
+
+.coverpage-maturity {
+  font-family: "Overpass", sans-serif;
+  font-weight: 400;
+  font-size: 1em;
+  margin: 0 0 2em 0;
+  text-transform: uppercase; }
+
+#working-draft {
+  border-bottom: solid 3px #fda706; }
+
+#working-draft-band {
+  background-color: #fda706; }
+
+#committee-draft {
+  border-bottom: solid 3px #fd06fd; }
+
+#committee-draft-band {
+  background-color: #fd06fd; }
+
+#draft-standard {
+  border-bottom: solid 3px #fdf906; }
+
+#draft-standard {
+  border-bottom: solid 3px #fdf906; }
+
+#standard {
+  border-bottom: solid 3px #0ac442; }
+
+#standard-band {
+  background-color: #0ac442; }
+
+#obsolete {
+  border-bottom: solid 3px #7e0d13; }
+
+#obsolete-band {
+  background-color: #7e0d13; }
+
+/*
+    3. TYPOGRAPHY
+*/
+/*
+    3.1 Titles
+*/
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Overpass", sans-serif;
+  color: #0e1a85;
+  font-weight: 600;
+  margin-top: 2em;
+  margin-bottom: 0.3em; }
+
+h1 {
+  font-size: 1.4em;
+  text-transform: uppercase;
+  margin-top: 2em; }
+
+h1#content {
+  margin-top: 2em; }
+
+h2 {
+  font-size: 1.3em; }
+
+h3 {
+  font-size: 1.1em; }
+
+span[id^="toc"]:after {
+  float: left;
+  padding-right: 4px;
+  margin-left: -20px;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 0.8em;
+  color: #cfcfcf;
+  content: "\f0c1"; }
+
+p.TermNum, p.Terms, p.AltTerms {
+  color: #485094;
+  font-weight: 400; }
+
+p.TermNum {
+  font-size: 0.9em;
+  line-height: 1em;
+  margin: 0;
+  margin-top: 2em; }
+
+p.Terms {
+  font-size: 1.1em;
+  line-height: 1.7em;
+  margin: 0; }
+
+p.AltTerms {
+  font-style: italic;
+  margin: 0; }
+
+/*
+    3.2 Links
+*/
+a, a:visited {
+  text-decoration: none;
+  color: #485094; }
+
+a:hover {
+  color: white;
+  background: #1d1d1d;
+  box-shadow: 3px 0 0 #1d1d1d, -3px 0 0 #1d1d1d;
+  /* padding: 2px 0 2px 0; */ }
+
+::selection {
+  background: #1d1d1d;
+  /* WebKit/Blink Browsers */
+  color: white; }
+
+::-moz-selection {
+  background: #1d1d1d;
+  /* Gecko Browsers */
+  color: white; }
+
+.contact-info a:hover {
+  color: #485094;
+  text-decoration: underline;
+  background: none;
+  box-shadow: 0 0 0 0; }
+
+/*
+    3.3 Lists
+*/
+ul {
+  margin-left: 0.5em; }
+
+#toc-list ul {
+  margin-bottom: 0.25em; }
+
+#toc-list li {
+  list-style-type: none; }
+
+/*
+    3.4 Rules
+*/
+.rule {
+  width: 100%;
+  height: 1px;
+  background-color: #0e1a85;
+  margin: 2em 0; }
+
+/*
+    3.5 Bibliograhy
+*/
+p.Biblio {
+  margin-top: 1em;
+  margin-left: 2em; }
+
+/*
+    3.6 Source Code + figures
+*/
+.figure, .Sourcecode {
+  font-family: "Space Mono", monospace;
+  background-color: #f7f7f7;
+  font-size: 0.8em;
+  line-height: 1.6em;
+  padding: 1.5em;
+  margin: 2em 0 1em 0;
+  overflow: auto; }
+
+.FigureTitle {
+  font-weight: 700;
+  font-size: 1em;
+  text-align: center; }
+
+/*
+    3.7 Notes
+*/
+.Note {
+  background-color: #fff495;
+  color: #47430c;
+  padding: 1.2em;
+  margin: 2em 0 1em 0; }
+
+/*
+    3.8 Examples
+*/
+.example {
+  background-color: #e1eef1;
+  padding: 1.2em;
+  margin: 2em 0 1em 0; }
+
+.example .example-title {
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 0; }
+
+/*
+    3.9 Tables
+*/
+table {
+  border-collapse: collapse;
+  width: 100%;
+  font-weight: 300;
+  margin: 1em 0 2em 0;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 2em; }
+
+table, th, td {
+  border: 1px solid black;
+  font-size: 0.95em; }
+
+td, th {
+  padding: 1em; }
+
+td.header {
+  font-weight: 400; }
+
+p.TableTitle {
+  text-align: center;
+  margin-top: 2.5em;
+  font-weight: 400; }
+
+/*
+  3.10 Footnotes
+*/
+a.footnote-number {
+  vertical-align: super;
+  font-size: 0.8em; }
+
+.footnote {
+  font-size: 0.9em; }
+
+/*
+    3.11 Blockquotes
+*/
+.Quote {
+  background-color: #f7f7f7;
+  font-style: italic;
+  width: 80%;
+  padding: 1.5em;
+  margin-top: 2em;
+  margin-left: auto;
+  margin-right: auto; }
+
+/*
+    3.12 Formulas
+*/
+.formula {
+  background-color: #f7f7f7;
+  padding: 1.5em;
+  margin-top: 2em;
+  text-align: center; }
+
+/*
+    3.13 Contact Info
+*/
+.contact-info {
+  background-color: #f7f7f7;
+  padding: 2em;
+  margin-top: 5em;
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left; }
+
+.contact-info p, .contact-info a {
+  font-family: "Space Mono", monospace;
+  font-weight: 400; }
+
+.contact-info .name {
+  font-weight: 700;
+  font-size: 1.2em;
+  margin-bottom: 0; }
+
+.contact-info .address {
+  font-size: 1em;
+  line-height: 1.3em;
+  margin-top: 0; }
+
+/*
+    Keywords
+*/
+span.keyword {
+  font-weight: 600; }
+
+/*
+    Paragraphs
+*/
+p {
+  margin-top: 1em;
+  margin-bottom: 1em; }
+
+/*
+    4.0 Page header
+*/
+/*
+    4.1 Top Logo
+*/
+.wrapper-top {
+  background-color: #0e1a85;
+  /* background-image: url("img/dots@2x.png"); */
+  color: #ffffff;
+  padding: 2em 0; }
+
+.doc-number {
+  font-size: 0.5em;
+  font-family: "Overpass", sans-serif; }
+
+.coverpage-title {
+  padding-bottom: 0.5em;
+  font-family: "Overpass", sans-serif;
+  font-size: 1.5em;
+  font-weight: 900; }
+
+.WordSection11 {
+  padding: 0 2em 0 3em; }
+
+.WordSection2 {
+  padding: 0 3em 0 6em; }
+
+.zzSTDTitle1, .MsoCommentText {
+  display: none; }
+
+.coverpage {
+  text-align: center; }
+
+.coverpage-logo span, .coverpage-tc-name span {
+  font-family: "Overpass", sans-serif;
+  text-transform: uppercase;
+  font-weight: 600; }
+
+.coverpage-tc-name {
+  font-size: 1.2em;
+  line-height: 1.2em;
+  margin: 0.25em 0; }
+
+/*
+    4.2 Document Identity
+*/
+.coverpage-doc-identity {
+  font-size: 2em;
+  line-height: 2em; }
+
+.coverpage-title .title-second {
+  display: none; }
+
+.coverpage-stage-block {
+  font-family: "Overpass", sans-serif;
+  font-weight: 700;
+  font-size: 1.25em;
+  margin: 2em 0em 2em 0em;
+  text-transform: uppercase; }
+
+/*
+    4.3 Draft Warning
+*/
+.coverpage-warning {
+  border-top: solid 1px #f36f36;
+  border-bottom: solid 1px #f36f36;
+  margin: 1em 2em;
+  color: #485094;
+  padding: 1em; }
+
+.coverpage-warning .title {
+  color: #f36f36;
+  font-family: "Overpass", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1.2em; }
+
+/*
+    4.4 Copyright
+*/
+.copyright {
+  padding: 1em;
+  font-size: 0.8em;
+  text-align: left; }
+
+.copyright .name, .copyright .address {
+  color: #485094; }
+
+/*
+    5.0 Other styles
+*/
+/*
+To top button
+*/
+#myBtn {
+  font-family: "Space Mono", monospace;
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 12px;
+  border: none;
+  outline: none;
+  background-color: #1d1d1d;
+  opacity: 0.15;
+  color: white;
+  cursor: pointer;
+  padding: 10px 15px 10px 15px;
+  border-radius: 4px; }
+
+#myBtn:hover {
+  opacity: 1; }
+
+-->
+</style>
+    <style>
+      <!--
+p.Sourcecode, li.Sourcecode, div.Sourcecode, pre.Sourcecode {
+  margin-top: 0cm;
+  margin-right: 0cm;
+  margin-bottom: 12.0pt;
+  margin-left: 0cm;
+  text-align: left;
+  line-height: 12.0pt;
+  tab-stops: 20.15pt;
+  font-size: 9.0pt;
+  font-family: "Space Mono", monospace; }
+
+p.Biblio, li.Biblio, div.Biblio {
+  margin-top: 0cm;
+  margin-right: 0cm;
+  margin-bottom: 12.0pt;
+  margin-left: 33.15pt;
+  text-indent: -33.15pt;
+  tab-stops: 33.15pt;
+  line-height: 12.0pt;
+  font-size: 11.0pt;
+  font-weight: bold;
+  font-family: "Overpass", sans-serif; }
+
+p.FigureTitle {
+  margin-top: 0cm;
+  margin-right: 0cm;
+  margin-bottom: 6.0pt;
+  margin-left: 0cm;
+  text-align: center;
+  line-height: 12.0pt;
+  page-break-before: avoid;
+  tab-stops: 20.15pt;
+  font-size: 11.0pt;
+  font-weight: bold;
+  font-family: "Overpass", sans-serif; }
+
+p.TableTitle {
+  margin-top: 0cm;
+  margin-right: 0cm;
+  margin-bottom: 6.0pt;
+  margin-left: 0cm;
+  text-align: center;
+  page-break-after: avoid;
+  line-height: 12.0pt;
+  tab-stops: 20.15pt;
+  font-size: 11.0pt;
+  font-family: "Overpass", sans-serif; }
+
+p.Note, div.Note, li.Note, p.TableFootnote, div.TableFootnote, li.TableFootnote {
+  margin-top: 0cm;
+  margin-right: 0cm;
+  margin-bottom: 12.0pt;
+  margin-left: 0cm;
+  text-align: justify;
+  line-height: 12.0pt;
+  tab-stops: 20.15pt;
+  font-size: 10.0pt;
+  font-family: "Overpass", sans-serif;
+  font-size: 10.0pt; }
+
+p.ANNEX, li.ANNEX, div.ANNEX {
+  margin-top: 0cm;
+  margin-right: 0cm;
+  margin-bottom: 24.0pt;
+  margin-left: 0cm;
+  text-align: center;
+  text-indent: 0cm;
+  line-height: 15.5pt;
+  page-break-before: always;
+  page-break-after: avoid;
+  tab-stops: 20.15pt;
+  font-size: 14.0pt;
+  font-family: "Overpass", sans-serif;
+  font-weight: bold; }
+
+p.BiblioTitle, li.BiblioTitle, div.BiblioTitle {
+  margin-top: 0cm;
+  margin-right: 0cm;
+  margin-bottom: 15.5pt;
+  margin-left: 0cm;
+  text-align: center;
+  line-height: 15.5pt;
+  tab-stops: 20.15pt;
+  font-size: 14.0pt;
+  font-family: "Overpass", sans-serif;
+  font-weight: bold; }
+
+p.Definition, li.Definition, div.Definition {
+  margin-top: 0cm;
+  margin-right: 0cm;
+  margin-bottom: 12.0pt;
+  margin-left: 0cm;
+  text-align: justify;
+  line-height: 12.0pt;
+  tab-stops: 20.15pt;
+  font-size: 11.0pt;
+  font-family: "Overpass", sans-serif; }
+
+p.ForewordTitle, li.ForewordTitle, div.ForewordTitle {
+  margin-top: 0cm;
+  margin-right: 0cm;
+  margin-bottom: 15.5pt;
+  margin-left: 0cm;
+  text-align: justify;
+  line-height: 15.5pt;
+  page-break-before: always;
+  page-break-after: avoid;
+  tab-stops: 20.15pt;
+  font-size: 14.0pt;
+  font-family: "Overpass", sans-serif;
+  font-weight: bold; }
+
+p.IntroTitle, li.IntroTitle, div.IntroTitle {
+  margin-top: 0cm;
+  margin-right: 0cm;
+  margin-bottom: 15.5pt;
+  margin-left: 0cm;
+  text-align: justify;
+  line-height: 15.5pt;
+  page-break-after: avoid;
+  tab-stops: 20.15pt;
+  font-size: 14.0pt;
+  page-break-before: always;
+  font-family: "Overpass", sans-serif;
+  font-weight: bold; }
+
+p.zzContents, li.zzContents, div.zzContents {
+  margin-top: 48.0pt;
+  margin-right: 0cm;
+  margin-bottom: 15.5pt;
+  margin-left: 0cm;
+  line-height: 15.5pt;
+  page-break-before: always;
+  page-break-after: avoid;
+  tab-stops: 20.15pt;
+  font-size: 14.0pt;
+  font-family: "Overpass", sans-serif;
+  font-weight: bold; }
+
+p.zzCopyright, li.zzCopyright {
+  margin-top: 0cm;
+  margin-right: 14.2pt;
+  margin-bottom: 12.0pt;
+  margin-left: 14.2pt;
+  text-align: justify;
+  line-height: 12.0pt;
+  tab-stops: 20.15pt 25.7pt 481.15pt;
+  padding: 0cm;
+  font-size: 11.0pt;
+  font-family: "Overpass", sans-serif; }
+
+div.zzCopyright {
+  border: solid windowtext 1.0pt;
+  padding: 1.0pt 4.0pt 0cm 4.0pt;
+  margin-left: 5.1pt;
+  margin-right: 5.1pt; }
+
+p.zzCopyright_address {
+  margin-top: 0cm;
+  margin-right: 14.2pt;
+  margin-bottom: 0.0pt;
+  margin-left: 14.2pt;
+  text-autospace: none;
+  padding-left: 20pt;
+  font-size: 10.0pt;
+  text-align: left; }
+
+p.zzSTDTitle, li.zzSTDTitle, div.zzSTDTitle {
+  margin-top: 20.0pt;
+  margin-right: 0cm;
+  margin-bottom: 38.0pt;
+  margin-left: 0cm;
+  line-height: 17.5pt;
+  tab-stops: 20.15pt;
+  font-size: 16.0pt;
+  font-family: "Overpass", sans-serif;
+  font-weight: bold; }
+
+p.zzSTDTitle1, li.zzSTDTitle1, div.zzSTDTitle1 {
+  margin-top: 0pt;
+  margin-right: 0cm;
+  margin-bottom: 18.0pt;
+  margin-left: 0cm;
+  line-height: 17.5pt;
+  tab-stops: 20.15pt;
+  font-size: 16.0pt;
+  font-family: "Overpass", sans-serif;
+  font-weight: bold; }
+
+p.Quote, li.Quote, div.Quote {
+  margin-top: 0cm;
+  margin-right: 36.0pt;
+  margin-bottom: 0cm;
+  margin-left: 36.0pt;
+  text-align: justify;
+  line-height: 12.0pt;
+  tab-stops: 20.15pt;
+  font-size: 11.0pt;
+  font-family: "Overpass", sans-serif; }
+
+p.QuoteAttribution {
+  text-align: right; }
+
+p.Admonition, li.Admonition, div.Admonition {
+  margin-top: 0cm;
+  margin-right: 57.6pt;
+  margin-bottom: 0cm;
+  margin-left: 57.6pt;
+  margin-bottom: .0001pt;
+  border: none;
+  padding: 0cm;
+  font-size: 12.0pt;
+  font-family: "Overpass", sans-serif;
+  color: #4472C4;
+  font-style: italic; }
+
+p.Code, li.Code, div.Code {
+  margin: 0cm;
+  margin-bottom: .0001pt;
+  line-height: 10.0pt;
+  tab-stops: 20.15pt;
+  font-size: 9.0pt;
+  font-family: "Space Mono", monospace; }
+
+p.Formula, li.Formula, div.Formula {
+  margin-top: 0cm;
+  margin-right: 0cm;
+  margin-bottom: 11.0pt;
+  margin-left: 20.15pt;
+  line-height: 12.0pt;
+  tab-stops: right 487.45pt;
+  font-size: 11.0pt;
+  font-family: "Overpass", sans-serif; }
+
+@page WordSection1 {
+  size: 595.3pt 841.9pt;
+  margin: 39.7pt 53.85pt 1.0cm 53.85pt; }
+div.WordSection1 {
+  page: WordSection1; }
+
+@page WordSection2 {
+  size: 595.3pt 841.9pt;
+  margin: 39.7pt 53.85pt 1.0cm 53.85pt; }
+div.WordSection2 {
+  page: WordSection2; }
+
+@page WordSection3 {
+  size: 595.3pt 841.9pt;
+  margin: 39.7pt 53.85pt 1.0cm 53.85pt; }
+div.WordSection3 {
+  page: WordSection3; }
+
+ol {
+  margin-bottom: 0cm; }
+
+ul {
+  margin-bottom: 0cm; }
+
+table.MsoISOTable {
+  border-collapse: collapse;
+  border: solid windowtext 2pt;
+  font-size: 10.0pt;
+  font-family: "Overpass", sans-serif; }
+
+table.MsoISOTable tr {
+  page-break-inside: avoid; }
+
+table.MsoISOTable th {
+  border: solid windowtext 1pt;
+  padding: 0cm 2.85pt 0cm 2.85pt; }
+
+table.MsoISOTable td {
+  border: solid windowtext 1pt;
+  padding: 0cm 2.85pt 0cm 2.85pt; }
+
+table.MsoTableGrid {
+  border: solid windowtext 1.0pt;
+  font-size: 10.0pt;
+  font-family: "Overpass", sans-serif; }
+
+td {
+  page-break-inside: avoid; }
+
+tr {
+  page-break-after: avoid; }
+
+span.stem {
+  font-family: "Cambria Math",serif;
+  font-style: italic; }
+
+div.formula {
+  tab-stops: right 487.45pt; }
+
+body {
+  tab-interval: 36.0pt; }
+
+dt {
+  page-break-inside: avoid;
+  page-break-after: avoid; }
+
+.coverpage_docnumber {
+  text-align: center;
+  font-size: 14.0pt;
+  font-weight: bold; }
+
+.coverpage_techcommittee {
+  text-align: center; }
+
+.coverpage_docstage {
+  text-align: center;
+  font-size: 30.0pt;
+  color: #485094; }
+
+div.coverpage_warning {
+  border: solid windowtext 1.0pt #485094;
+  padding: 1.0pt 4.0pt 1.0pt 4.0pt #485094;
+  margin-left: 4.25pt;
+  margin-right: 4.25pt; }
+
+.coverpage_warning {
+  color: #485094;
+  font-size: 10.0pt; }
+
+a.TableFootnoteRef {
+  vertical-align: super; }
+
+aside {
+  font-size: 10.0pt; }
+
+div.example {
+  border: solid black .25pt;
+  padding: 10pt;
+  margin: 10pt; }
+
+table.dl {
+  margin-top: 0cm;
+  margin-right: 0cm;
+  margin-bottom: 11.0pt;
+  margin-left: 20.15pt; }
+
+ol {
+  margin-bottom: 0cm;
+  margin-left: 0cm; }
+
+ul {
+  margin-bottom: 0cm;
+  margin-left: 0cm; }
+
+-->
+    </style>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!--TOC script import-->
+<script type="text/javascript" src="https://cdn.rawgit.com/jgallen23/toc/0.3.2/dist/toc.min.js"></script>
+
+<!--Google fonts-->
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i|Space+Mono:400,700" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css?family=Overpass:300,300i,600,900" rel="stylesheet" />
+<!--Font awesome import for the link icon-->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css" integrity="sha384-v2Tw72dyUXeU3y4aM2Y0tBJQkGfplr39mxZqlTBDUZAb9BGoC40+rdFCG0m10lXk" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/fontawesome.css" integrity="sha384-q3jl8XQu1OpdLgGFvNRnPdj5VIlCvgsDQTQB6owSOHWlAurxul7f+JpUOVdAiJ5P" crossorigin="anonymous" />
+</head>
+  <body lang="EN-US" link="blue" vlink="#954F72" xml:lang="EN-US" class="container">
+    <div class="WordSection1">
+
+<div class="document-stage-band" id="working-draft-band">
+    <p class="document-stage">Working Draft</p>
+</div>
+
+<div class="document-type-band" id="standard-band">
+    <p class="document-type">Calconnect Standard</p>
+</div>
+  
+    
+
+  <div id="toggle"> <span>&#x2022;</span> </div>
+
+  <header>
+
+<!--<div class="WordSection1">-->
+  <div class="coverpage">
+    <div class="wrapper-top">
+
+  <div class="coverpage-doc-identity">
+    <div class="doc-number">
+      <span class="docnumber">CD 18XX(wd)</span>
+      <span class="docnumber-separator">:</span>
+      <span class="docyear">2018</span>
+    </div>
+
+    <div class="coverpage-title">
+      <span class="title-first">Guidelines against calendar abuse for calendaring system operators</span>
+      <!--<span class="title-second"></span>-->
+    </div>
+  </div>
+
+  <div class="coverpage-logo">
+    <span>The Calendaring and Scheduling Consortium</span>
+  </div>
+
+  <div class="coverpage-tc-name">
+    <span>TC CALSPAM</span>
+  </div>
+  </div>
+
+  <div class="WordSection11">
+  <div class="coverpage-stage-block">
+    <span class="coverpage-stage" id="standard">Calconnect Standard</span>
+  </div>
+
+  <div class="coverpage-stage-block">
+    <span class="coverpage-maturity" id="working-draft">Working Draft</span>
+</div>
+
+
+  <div class="coverpage-warning">
+    <span class="title">Warning for Drafts</span>
+
+    <p class="content">
+    This document is not a CalConnect Standard. It is distributed for review and
+    comment, and is subject to change without notice and may not be referred to as
+    a Standard. Recipients of this draft are invited to submit, with their
+    comments, notification of any relevant patent rights of which they are aware
+    and to provide supporting documentation.
+    </p>
+  </div>
+
+<div class="copyright">
+  <p class="year">
+    &#xA9; 2018 The Calendaring and Scheduling Consortium, Inc.
+  </p>
+
+  <p class="message">
+    All rights reserved. Unless otherwise specified, no part of this
+    publication may be reproduced or utilized otherwise in any form or by any
+    means, electronic or mechanical, including photocopying, or posting on the
+    internet or an intranet, without prior written permission. Permission can
+    be requested from the address below.
+  </p>
+
+<div class="contact-info">
+  <p class="name">The Calendaring and Scheduling Consortium, Inc.</p>
+  <p class="address">
+    4390 Chaffin Lane<br />
+    McKinleyville<br />
+    California 95519<br />
+    United States of America<br />
+    <br />
+    <a href="mailto:copyright@calconnect.org">copyright@calconnect.org</a><br />
+    <a href="www.calconnect.org">www.calconnect.org</a>
+  </p>
+</div>
+</div>
+
+<div class="rule"></div>
+</div>
+
+
+
+</div></header>
+
+
+      <p>&#xA0;</p>
+    </div>
+    <br />
+    <div class="WordSection2">
+
+<nav>
+  <h1 id="content">Contents</h1>
+  <div id="toc"></div>
+
+</nav>
+
+
+<div class="rule toc"></div>
+
+
+      <br />
+      <div>
+        <h1 class="ForewordTitle">Foreword</h1>
+        <p id="_f4b0f3e8-3e71-40e3-b966-e6d4db2697cf">The Calendaring and Scheduling Consortium ("CalConnect") is global non-profit
+organization with the aim to facilitate interoperability of technologies across
+user-centric systems and applications.</p>
+        <p id="_5c661868-8761-4dba-a282-57194226cd53">CalConnect works closely with liaison partners including international
+organizations such as ISO, OASIS and M3AAWG.</p>
+        <p id="_69f6caac-3646-4ad2-802d-ae5546161d1a">The procedures used to develop this document and those intended for its further
+maintenance are described in the CalConnect Directives.</p>
+        <p id="_03794c92-0d5d-4f90-846f-1966b1d609fe">In particular the different approval criteria needed for the different types of
+ISO documents should be noted. This document was drafted in accordance with the
+editorial rules of the CalConnect Directives.</p>
+        <p id="_1a6f3452-7d68-4f59-95dd-eb1245b4c225">Attention is drawn to the possibility that some of the elements of this
+document may be the subject of patent rights. CalConnect shall not be held responsible
+for identifying any or all such patent rights. Details of any patent rights
+identified during the development of the document will be in the Introduction
+and/or on the CalConnect list of patent declarations received (see
+www.calconnect.com/patents).</p>
+        <p id="_5623288d-9432-457e-89ac-2aba6e024eba">Any trade name used in this document is information given for the convenience
+of users and does not constitute an endorsement.</p>
+        <p id="_499db3e3-0c53-45d0-85ff-fa8a549d2b83">This document was prepared by Technical Committee <i>CALSPAM</i>.</p>
+      </div>
+      <br />
+      <div class="Section3" id="_introduction">
+        <h1 class="IntroTitle">Introduction</h1>
+        <p id="_0d3aa227-5e14-4722-b240-94ad0def97e4">"Calendar spam", unsolicited calendar events and meeting invitations, is a
+recently exploited channel inserting unsolicited or otherwise unwanted events
+and invitations into calendaring and scheduling systems. It is a new form of
+application-specific spam which takes advantage of the application layer across
+multiple technologies that spans scheduling, calendaring and messaging systems.
+As is the case with email spam, calendar spam is not only used to deliver
+unwanted information, but can also be used for malicious purposes such as
+phishing attempts and delivering dangerous payloads.</p>
+        <p id="_3d81e20f-d65b-4d3f-bc8f-93cc0a6af007">This CalConnect Standard provides guidelines for calendar system operators to
+better protect users from receiving undesired information delivered
+through calendar systems.</p>
+      </div>
+      <p>&#xA0;</p>
+    </div>
+    <br />
+    <main><button onclick="topFunction()" id="myBtn" title="Go to top">Top</button><div class="WordSection3">
+      <p class="zzSTDTitle1">Guidelines against calendar abuse for calendaring system operators</p>
+      <div id="_scope">
+        <h1>1.&#xA0; Scope</h1>
+        <p id="_a65cdf64-cf2d-415f-be61-8e3dc8ea1d97">This document specifies guidelines for calendaring system operators to:</p>
+        <ul>
+  <li>
+    <p id="_e08c5d5a-ac70-472f-a04e-7d2fe241bb76">detect the occurrence of calendar abuse;</p>
+  </li>
+  <li>
+    <p id="_e1e3ff33-e67e-4edb-b902-9d80aa1ccc84">processes and procedures to mitigate calendar abuse; and</p>
+  </li>
+  <li>
+    <p id="_f8980c5b-6bb3-4bb4-a3d6-9f4081415dcb">definition of acceptable practices with calendar usage.</p>
+  </li>
+</ul>
+      </div>
+      <div>
+        <h1>2.&#xA0; Normative References</h1>
+        <p>The following documents are referred to in the text in such a way that some or all of their content constitutes requirements of this document. For dated references, only the edition cited applies. For undated references, the latest edition of the referenced document (including any amendments) applies.</p>
+        <p id="ISO27000">ISO/IEC 27000, <i> Information technology&#x2009;&#x2014;&#x2009;Security techniques&#x2009;&#x2014;&#x2009;Information security management systems&#x2009;&#x2014;&#x2009;Overview and vocabulary</i></p>
+        <p id="ISO27001">ISO/IEC 27001, <i> Information technology&#x2009;&#x2014;&#x2009;Security techniques&#x2009;&#x2014;&#x2009;Information security management systems&#x2009;&#x2014;&#x2009;Requirements</i></p>
+      </div>
+      <div id="_terms_and_definitions"><h1>3.&#xA0; Terms and Definitions</h1><p>For the purposes of this document,
+    the following terms and definitions apply.</p>
+<h2 class="TermNum" id="calendar-system">3.1</h2><p class="Terms" style="text-align:left;">calendar system</p><p id="_72ecc12e-2f40-4ee2-895a-2a5b691bbc79">an information system that provides calendaring and scheduling functionality.</p>
+<div class="Note"><p class="Note">Note 1 to entry: The term <i>calendar system</i> in this standard specifically refers to calendaring systems that fulfill the requirements of CalConnect calendaring standards.</p></div><h2 class="TermNum" id="calendar-spam">3.2</h2>
+  <p class="Terms" style="text-align:left;">calendar spam</p>
+  <p id="_f0fd56f0-d8ef-448c-9ca8-4b83b4271b59">unsolicited calendar events and meeting invitations delivered through calendaring systems</p>
+<h2 class="TermNum" id="calendar-abuse">3.3</h2>
+  <p class="Terms" style="text-align:left;">calendar abuse</p>
+  <p id="_6b3733a6-404a-45e5-8912-4d01bb09d16f">malicious usage of a <i>calendar system</i> (<a href="#calendar-system">3.1</a>), possibly leading to an <i>attack</i> (<a href="#ISO27000">ISO/IEC 27000 3.2</a>) on the receiving user</p>
+<h2 class="TermNum" id="attack">3.4</h2><p class="Terms" style="text-align:left;">attack</p><p id="_2b484baa-6bbe-4f99-91ec-85d03f5452c1">attempt to destroy, expose, alter, disable, steal or gain unauthorized access to or make unauthorized use of an asset</p>
+<p>[SOURCE: <a href="#ISO27000">ISO/IEC 27000</a>]</p><h2 class="TermNum" id="spam">3.5</h2><p class="Terms" style="text-align:left;">spam</p><p id="_0e1c054b-2203-43ba-8418-b3b62c57ec2d">SPAM</p><p id="_95574474-1419-4269-a2c9-ffefee94576b">unsolicited information</p>
+</div>
+      <div id="_calendar_abuse_flow">
+        <h1>4.&#xA0; Calendar abuse flow</h1>
+        <div id="_general">
+  <h2>4.1. General</h2>
+</div>
+        <div id="_defining_calendar_abuse">
+  <h2>4.2. Defining calendar abuse</h2>
+</div>
+        <div id="_creation_of_abusive_content">
+  <h2>4.3. Creation of abusive content</h2>
+</div>
+        <div id="_delivery_of_abusive_content">
+  <h2>4.4. Delivery of abusive content</h2>
+</div>
+        <div id="_consequences_of_abusive_content">
+  <h2>4.5. Consequences of abusive content</h2>
+</div>
+      </div>
+      <div id="_process">
+        <h1>5.&#xA0; Process</h1>
+        <p id="_9be7416a-0e62-4716-a24d-55dc794cad82">There should be a "calendar abuse management process" in place.</p>
+        <p id="_a3514504-674e-45d2-b265-f1a05d3fce15">Define policies, roles and responsibilities.</p>
+        <p id="_b6df2997-a7b0-4ea5-a23c-f4c357b2fbf8">Document policies, procedures to ensure process is resilient.</p>
+        <div id="_policies">
+  <h2>5.1. Policies</h2>
+  <p id="_7d56150c-d9c8-4678-9cd6-16514ee18725">Determine policy of acceptable calendar user behavior.</p>
+</div>
+        <div id="_acceptable_calendar_user_behavior"><h2>5.2. Acceptable calendar user behavior</h2><div id="_typical_behavior">
+  <h3>5.2.1. Typical behavior</h3>
+</div>
+<div id="_defining_acceptability">
+  <h3>5.2.2. Defining acceptability</h3>
+</div></div>
+      </div>
+      <div id="_managing_calendar_abuse">
+        <h1>6.&#xA0; Managing calendar abuse</h1>
+        <div id="_general_2"><h2>6.1. General</h2><p id="_11b26abe-2945-48c8-8af2-cc874b4d81ec">Four stages:</p>
+<ul>
+  <li>
+    <p id="_e3c3d86d-9af6-4b79-afa3-322d9f85e1b1">Detect</p>
+  </li>
+  <li>
+    <p id="_4197faf0-df91-4d07-9760-e0ef930fe3f7">Identify</p>
+  </li>
+  <li>
+    <p id="_f7b16cbe-3c09-4692-a998-a47ba520c1d9">Block</p>
+  </li>
+  <li>
+    <p id="_7bbe3c75-6884-46ac-b463-47a8f86fed42">Report</p>
+  </li>
+</ul></div>
+      </div>
+      <div id="_identifying_calendar_abuse">
+        <h1>7.&#xA0; Identifying calendar abuse</h1>
+        <div id="_general_3">
+  <h2>7.1. General</h2>
+</div>
+        <div id="_types_of_abuse"><h2>7.2. Types of abuse</h2><div id="_spam">
+  <h3>7.2.1. Spam</h3>
+</div>
+<div id="_malware">
+  <h3>7.2.2. Malware</h3>
+</div></div>
+      </div>
+      <div id="_blocking_calendar_abuse">
+        <h1>8.&#xA0; Blocking calendar abuse</h1>
+        <div id="_general_4">
+  <h2>8.1. General</h2>
+</div>
+        <div id="_preventing_false_positives">
+  <h2>8.2. Preventing false positives</h2>
+</div>
+      </div>
+      <div id="_reporting_calendar_abuse">
+        <h1>9.&#xA0; Reporting calendar abuse</h1>
+        <div id="_general_5">
+  <h2>9.1. General</h2>
+</div>
+        <div id="_reporting_parties">
+  <h2>9.2. Reporting parties</h2>
+</div>
+        <div id="_managing">
+  <h2>9.3. Managing</h2>
+</div>
+      </div>
+      <div id="_how_management_of_calendar_abuse_interacts_with_other_processes">
+        <h1>10.&#xA0; How management of calendar abuse interacts with other processes</h1>
+        <ul>
+  <li>
+    <p id="_dba77f3d-12d6-4123-8c0d-a122ff301658">Information security management <a href="#ISO27001">ISO/IEC 27001</a></p>
+  </li>
+  <li>
+    <p id="_9e3819bc-69a8-4ab9-abf8-f34fe0438276">IT service management (ISO/IEC 20000-1)</p>
+  </li>
+  <li>
+    <p id="_be5519dc-aa24-48a9-bd4d-05a403e329b1">Vulnerability management</p>
+  </li>
+</ul>
+        <p id="_815df966-0b2f-4b19-aded-172756ea1893">This document defines four classes of requirements and conformance. <a href="#AnnexA">Appendix A</a>
+specifies how conformance with these classes shall be tested.</p>
+      </div>
+      <br />
+      <div id="AnnexA" class="Section3">
+        <h1 class="Annex"><b>Appendix A</b><br />(informative)<br /><br /><b>Technical controls</b></h1>
+        <div id="_introduction_2">
+  <h2>A.1. Introduction</h2>
+  <p id="_80430d88-ebff-4978-9dd2-259441a705fb">This annex provides a list of technical controls that constitute best practice for
+calendar operators.</p>
+</div>
+        <div id="calendar-spam-detection"><h2>A.2. Calendar spam detection</h2><p class="TableTitle" align="center">Table A.1&#xA0;&#x2014; Calendar Spam Detection</p><table id="_ca059115-b789-4bf6-a6e2-e75ffe2a88fb" class="MsoISOTable" border="1" cellspacing="0" cellpadding="0"><thead><tr><th align="left" style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;">Technical control</th><th align="left" style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;">Description</th></tr></thead><tbody><tr><td align="left" style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;">Check email spam score</td><td align="left" style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;">Use email message spam analysis methods to determine nature of calendar message.</td></tr></tbody></table>
+<p id="_e23fc29f-b894-4e2c-aa47-e7ed96e05f27">An example of using SpamAssasin to detect calendar spam:</p>
+<p id="_867f81fc-952d-4852-bc38-8518522936b6" class="Sourcecode">{<br />&#xA0;&#xA0;"Assassin":&#xA0;{<br />&#xA0;&#xA0;&#xA0;&#xA0;"check":&#xA0;"spam"<br />&#xA0;&#xA0;}<br />}</p></div>
+      </div>
+      <br />
+      <div>
+        <h1 class="Section3">Bibliography</h1>
+        <p id="ISO9945" class="Biblio">[1]&#xA0; ISO/IEC/IEEE 9945: 2009, <i> Information technology&#x2009;&#x2014;&#x2009;Portable Operating System Interface (POSIX&#xAE;) Base Specifications, Issue 7</i></p>
+      </div>
+    </div></main>
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    asciimath2jax: {
+      delimiters: [['(#(', ')#)']]
+    }
+ });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=AM_HTMLorMML"></script>
+  <script>//TOC generation
+      $('#toc').toc({
+          'selectors': 'h1,h2:not(.TermNum)', //elements to use as headings
+          'container': 'main', //element to find all selectors in
+          'smoothScrolling': true, //enable or disable smooth scrolling on click
+          'prefix': 'toc', //prefix for anchor tags and class names
+          'onHighlight': function(el) {}, //called when a new section is highlighted 
+          'highlightOnScroll': true, //add class to heading that is currently in focus
+          'highlightOffset': 100, //offset to trigger the next headline
+          'anchorName': function(i, heading, prefix) { //custom function for anchor name
+              return prefix+i;
+          },
+          'headerText': function(i, heading, $heading) { //custom function building the header-item text
+              return $heading.text();
+          },
+      'itemClass': function(i, heading, $heading, prefix) { // custom function for item class
+        return $heading[0].tagName.toLowerCase();
+      }
+      });
+      
+  </script>
+
+<script>
+  //TOC toggle animation
+$('#toggle').on('click', function(){
+    if( $('nav').is(':visible') ) {
+        $('nav').animate({ 'left': '-353px' }, 'slow', function(){
+            $('nav').hide();
+        });
+        $('.container').animate({ 'padding-left': '31px' }, 'slow');
+    }
+    else {
+        $('nav').show();
+        $('nav').animate({ 'left': '0px' }, 'slow');
+        $('.container').animate({ 'padding-left': '360px' }, 'slow');
+    }
+});
+</script>
+
+<script>
+    // Scroll to top button
+    window.onscroll = function() {scrollFunction()};
+    
+    function scrollFunction() {
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            document.getElementById("myBtn").style.display = "block";
+        } else {
+            document.getElementById("myBtn").style.display = "none";
+        }
+    }
+    
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+    </script>
+
+<script>
+  $(document).ready(function() {
+	  $('[id^=toc]').each(function ()
+	  {
+	     var currentToc = $(this);
+       var url = window.location.href;
+	     currentToc.wrap("<a href='" + url + "#" + currentToc.attr("id") + "' </a>");
+	  });
+});
+</script>
+</body>
+</html>
