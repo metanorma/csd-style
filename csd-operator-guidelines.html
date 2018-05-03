@@ -2,7 +2,25 @@
 <!DOCTYPE html SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns:epub="http://www.idpf.org/2007/ops">
   <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>csd-operator-guidelines</title><style>
+    <title>csd-operator-guidelines</title>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!--TOC script import-->
+    <script type="text/javascript" src="https://cdn.rawgit.com/jgallen23/toc/0.3.2/dist/toc.min.js"></script>
+
+    <script src="anchor.min.js"></script>
+
+    <!--Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i|Space+Mono:400,700" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Overpass:300,300i,600,900" rel="stylesheet" />
+    <!--Font awesome import for the link icon-->
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css" integrity="sha384-v2Tw72dyUXeU3y4aM2Y0tBJQkGfplr39mxZqlTBDUZAb9BGoC40+rdFCG0m10lXk" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/fontawesome.css" integrity="sha384-q3jl8XQu1OpdLgGFvNRnPdj5VIlCvgsDQTQB6owSOHWlAurxul7f+JpUOVdAiJ5P" crossorigin="anonymous" />
+    
+    
+    <style>
 
 /*
     0 CSS RESET
@@ -290,16 +308,6 @@ h2 {
 
 h3 {
   font-size: 1.1em; }
-
-span[id^="toc"]:after {
-  float: left;
-  padding-right: 4px;
-  margin-left: -26px;
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  font-size: 0.8em;
-  color: #cfcfcf;
-  content: "\f0c1"; }
 
 
 p.TermNum, p.Terms, p.AltTerms {
@@ -636,6 +644,13 @@ To top button
 #myBtn:hover {
   opacity: 1; }
 
+a.anchorjs-link:hover {
+  background: none;
+  color: #485094;
+  box-shadow: none;
+}
+
+
 </style>
 
 <!--style>
@@ -970,18 +985,7 @@ table.dl {
   margin-left: 20.15pt; }
 </style-->
 
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-<!--TOC script import-->
-<script type="text/javascript" src="https://cdn.rawgit.com/jgallen23/toc/0.3.2/dist/toc.min.js"></script>
-
-<!--Google fonts-->
-<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i|Space+Mono:400,700" rel="stylesheet" />
-<link href="https://fonts.googleapis.com/css?family=Overpass:300,300i,600,900" rel="stylesheet" />
-<!--Font awesome import for the link icon-->
-
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css" integrity="sha384-v2Tw72dyUXeU3y4aM2Y0tBJQkGfplr39mxZqlTBDUZAb9BGoC40+rdFCG0m10lXk" crossorigin="anonymous" />
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/fontawesome.css" integrity="sha384-q3jl8XQu1OpdLgGFvNRnPdj5VIlCvgsDQTQB6owSOHWlAurxul7f+JpUOVdAiJ5P" crossorigin="anonymous" />
 </head>
 
  
@@ -1372,15 +1376,14 @@ $('#toggle').on('click', function(){
     }
     </script>
 
+
 <script>
-  $(document).ready(function() {
-	  $('[id^=toc]').each(function ()
-	  {
-	     var currentToc = $(this);
-       var url = window.location.href;
-	     currentToc.wrap("<a href='" + url + "#" + currentToc.attr("id") + "' </a>");
-	  });
-});
+  anchors.options = {
+  placement: 'left'
+};
+anchors.add('h1, h2, h3, h4');
 </script>
+  
+
 </body>
 </html>
