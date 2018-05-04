@@ -304,13 +304,15 @@ h1#content {
   margin-top: 2em; }
 
 h2 {
-  font-size: 1.3em; }
+  font-size: 1.3em;
+  font-weight: 400; }
 
 h3 {
-  font-size: 1.1em; }
+  font-size: 1.1em;
+  font-weight: 400; }
 
 
-p.TermNum, p.Terms, p.AltTerms {
+.TermNum, .Terms, .AltTerms {
   color: #485094;
   font-weight: 400; }
 
@@ -323,10 +325,6 @@ p.TermNum {
 p.Terms {
   font-size: 1.1em;
   line-height: 1.7em;
-  margin: 0; }
-
-p.AltTerms {
-  font-style: italic;
   margin: 0; }
 
 /*
@@ -362,7 +360,27 @@ a:hover {
     3.3 Lists
 */
 ul {
-  margin-left: 0.5em; }
+  margin-left: 1em; }
+
+li {
+  list-style: none;
+}
+
+li:before {
+  content: "—";
+  display: inline-block; width: 1em;
+  margin-left: -1em
+}
+
+li p {
+  display: inline-block;
+  margin-top: 0;
+  margin-bottom: 0.5em;
+}
+
+li:first-child {
+  margin-top: 1em;
+}
 
 #toc-list ul {
   margin-bottom: 0.25em; }
@@ -548,7 +566,10 @@ h2 p {
   font-family: "Overpass", sans-serif;
   font-size: 1.2em;
   line-height: 1.2em;
-  font-weight: 900; }
+  font-weight: 900; 
+  padding-left: 1em;
+  padding-right: 1em;}
+  
 
 .WordSection11 {
   padding: 0 2em 0 3em; }
@@ -1171,11 +1192,17 @@ through calendar systems.</p>
       </div>
       <div id="_terms_and_definitions"><h1>3.&#xA0; Terms and Definitions</h1><p>For the purposes of this document,
     the following terms and definitions apply.</p>
-<h2 class="TermNum" id="calendar-system">3.1
-  <p class="Terms" style="text-align:left;">calendar system</p></h2><p id="_72ecc12e-2f40-4ee2-895a-2a5b691bbc79">an information system that provides calendaring and scheduling functionality.</p>
-<div class="Note"><p class="Note">Note 1 to entry: The term <i>calendar system</i> in this standard specifically refers to calendaring systems that fulfill the requirements of CalConnect calendaring standards.</p></div>
 
-<h2 class="TermNum" id="calendar-spam">3.2 calendar spam</h2>
+<h2 class="TermNum" id="calendar-system">3.1
+  <p class="Terms" style="text-align:left;">calendar system</p></h2>
+  <p id="_72ecc12e-2f40-4ee2-895a-2a5b691bbc79">an information system that provides calendaring and scheduling functionality.</p>
+
+<div class="Note">
+  <p class="Note">Note 1 to entry: The term <i>calendar system</i> in this standard specifically refers to calendaring systems that fulfill the requirements of CalConnect calendaring standards.</p>
+</div>
+
+<h2 class="TermNum" id="calendar-spam">3.2 
+  <p class="Terms" style="text-align:left;">calendar spam</p></h2>
   <p id="_f0fd56f0-d8ef-448c-9ca8-4b83b4271b59">unsolicited calendar events and meeting invitations delivered through calendaring systems</p>
 
 <h2 class="TermNum" id="calendar-abuse">3.3
@@ -1189,7 +1216,7 @@ through calendar systems.</p>
 
 <h2 class="TermNum" id="spam">3.5
   <p class="Terms" style="text-align:left;">spam</p></h2>
-<p id="_0e1c054b-2203-43ba-8418-b3b62c57ec2d">SPAM</p><p id="_95574474-1419-4269-a2c9-ffefee94576b">unsolicited information</p>
+<p class="AltTerms" id="_0e1c054b-2203-43ba-8418-b3b62c57ec2d">SPAM</p><p id="_95574474-1419-4269-a2c9-ffefee94576b">unsolicited information</p>
 </div>
       <div id="_calendar_abuse_flow">
         <h1>4.&#xA0; Calendar abuse flow</h1>
