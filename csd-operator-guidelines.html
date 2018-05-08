@@ -2,8 +2,26 @@
 <!DOCTYPE html SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns:epub="http://www.idpf.org/2007/ops">
   <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>csd-operator-guidelines</title><style>
-  <!--
+    <title>csd-operator-guidelines</title>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!--TOC script import-->
+    <script type="text/javascript" src="https://cdn.rawgit.com/jgallen23/toc/0.3.2/dist/toc.min.js"></script>
+
+    <script src="anchor.min.js"></script>
+
+    <!--Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i|Space+Mono:400,700" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Overpass:300,300i,600,900" rel="stylesheet" />
+    <!--Font awesome import for the link icon-->
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css" integrity="sha384-v2Tw72dyUXeU3y4aM2Y0tBJQkGfplr39mxZqlTBDUZAb9BGoC40+rdFCG0m10lXk" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/fontawesome.css" integrity="sha384-q3jl8XQu1OpdLgGFvNRnPdj5VIlCvgsDQTQB6owSOHWlAurxul7f+JpUOVdAiJ5P" crossorigin="anonymous" />
+    
+    
+    <style>
+
 /*
     0 CSS RESET
 */
@@ -38,9 +56,6 @@ footer, header, hgroup, menu, nav, section {
 
 body {
   line-height: 1; }
-
-ol, ul {
-  list-style: none; }
 
 blockquote, q {
   quotes: none; }
@@ -289,22 +304,15 @@ h1#content {
   margin-top: 2em; }
 
 h2 {
-  font-size: 1.3em; }
+  font-size: 1.3em;
+  font-weight: 400; }
 
 h3 {
-  font-size: 1.1em; }
+  font-size: 1.1em;
+  font-weight: 400; }
 
-span[id^="toc"]:after {
-  float: left;
-  padding-right: 4px;
-  margin-left: -20px;
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  font-size: 0.8em;
-  color: #cfcfcf;
-  content: "\f0c1"; }
 
-p.TermNum, p.Terms, p.AltTerms {
+.TermNum, .Terms, .AltTerms {
   color: #485094;
   font-weight: 400; }
 
@@ -319,9 +327,9 @@ p.Terms {
   line-height: 1.7em;
   margin: 0; }
 
-p.AltTerms {
-  font-style: italic;
-  margin: 0; }
+span.obligation {
+    font-weight: 400;
+}
 
 /*
     3.2 Links
@@ -356,13 +364,36 @@ a:hover {
     3.3 Lists
 */
 ul {
-  margin-left: 0.5em; }
+  margin-left: 1.2em; }
 
-#toc-list ul {
+li {
+  list-style: none;
+}
+
+  li:before {
+    content: "—";
+    display: inline-block; width: 1em;
+    margin-left: -1.2em;
+  }
+  
+  li p {
+    display: inline;
+  }
+
+li:first-child {
+  margin-top: 1em;
+}
+
+#toc ul {
   margin-bottom: 0.25em; }
 
-#toc-list li {
+#toc li {
   list-style-type: none; }
+
+#toc li:before {
+  content: " ";
+  display: none;
+}
 
 /*
     3.4 Rules
@@ -517,6 +548,10 @@ p {
   margin-top: 1em;
   margin-bottom: 1em; }
 
+h2 p {
+  display: inline;
+}
+
 /*
     4.0 Page header
 */
@@ -536,8 +571,12 @@ p {
 .coverpage-title {
   padding-bottom: 0.5em;
   font-family: "Overpass", sans-serif;
-  font-size: 1.5em;
-  font-weight: 900; }
+  font-size: 1.2em;
+  line-height: 1.2em;
+  font-weight: 900; 
+  padding-left: 1em;
+  padding-right: 1em;}
+  
 
 .WordSection11 {
   padding: 0 2em 0 3em; }
@@ -549,7 +588,8 @@ p {
   display: none; }
 
 .coverpage {
-  text-align: center; }
+  text-align: center;
+  padding-left: 1.5em; }
 
 .coverpage-logo span, .coverpage-tc-name span {
   font-family: "Overpass", sans-serif;
@@ -632,10 +672,17 @@ To top button
 #myBtn:hover {
   opacity: 1; }
 
--->
+a.anchorjs-link:hover {
+  background: none;
+  color: #485094;
+  box-shadow: none;
+}
+
+
 </style>
-    <style>
-      <!--
+
+<!--style>
+      
 p.Sourcecode, li.Sourcecode, div.Sourcecode, pre.Sourcecode {
   margin-top: 0cm;
   margin-right: 0cm;
@@ -648,8 +695,6 @@ p.Sourcecode, li.Sourcecode, div.Sourcecode, pre.Sourcecode {
   font-family: "Space Mono", monospace; }
 
 p.Biblio, li.Biblio, div.Biblio {
-  margin-top: 0cm;
-  margin-right: 0cm;
   margin-bottom: 12.0pt;
   margin-left: 33.15pt;
   text-indent: -33.15pt;
@@ -712,10 +757,7 @@ p.ANNEX, li.ANNEX, div.ANNEX {
   font-weight: bold; }
 
 p.BiblioTitle, li.BiblioTitle, div.BiblioTitle {
-  margin-top: 0cm;
-  margin-right: 0cm;
   margin-bottom: 15.5pt;
-  margin-left: 0cm;
   text-align: center;
   line-height: 15.5pt;
   tab-stops: 20.15pt;
@@ -888,12 +930,6 @@ div.WordSection2 {
 div.WordSection3 {
   page: WordSection3; }
 
-ol {
-  margin-bottom: 0cm; }
-
-ul {
-  margin-bottom: 0cm; }
-
 table.MsoISOTable {
   border-collapse: collapse;
   border: solid windowtext 2pt;
@@ -975,31 +1011,15 @@ table.dl {
   margin-right: 0cm;
   margin-bottom: 11.0pt;
   margin-left: 20.15pt; }
+</style-->
 
-ol {
-  margin-bottom: 0cm;
-  margin-left: 0cm; }
 
-ul {
-  margin-bottom: 0cm;
-  margin-left: 0cm; }
-
--->
-    </style>
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-<!--TOC script import-->
-<script type="text/javascript" src="https://cdn.rawgit.com/jgallen23/toc/0.3.2/dist/toc.min.js"></script>
-
-<!--Google fonts-->
-<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i|Space+Mono:400,700" rel="stylesheet" />
-<link href="https://fonts.googleapis.com/css?family=Overpass:300,300i,600,900" rel="stylesheet" />
-<!--Font awesome import for the link icon-->
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css" integrity="sha384-v2Tw72dyUXeU3y4aM2Y0tBJQkGfplr39mxZqlTBDUZAb9BGoC40+rdFCG0m10lXk" crossorigin="anonymous" />
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/fontawesome.css" integrity="sha384-q3jl8XQu1OpdLgGFvNRnPdj5VIlCvgsDQTQB6owSOHWlAurxul7f+JpUOVdAiJ5P" crossorigin="anonymous" />
 </head>
-  <body lang="EN-US" link="blue" vlink="#954F72" xml:lang="EN-US" class="container">
-    <div class="WordSection1">
+
+ 
+ <body lang="EN-US" link="blue" vlink="#954F72" xml:lang="EN-US" class="container">
+    
+<div class="WordSection1">
 
 <div class="document-stage-band" id="working-draft-band">
     <p class="document-stage">Working Draft</p>
@@ -1013,7 +1033,7 @@ ul {
 
   <div id="toggle"> <span>&#x2022;</span> </div>
 
-  <header>
+<header>
 
 <!--<div class="WordSection1">-->
   <div class="coverpage">
@@ -1179,15 +1199,31 @@ through calendar systems.</p>
       </div>
       <div id="_terms_and_definitions"><h1>3.&#xA0; Terms and Definitions</h1><p>For the purposes of this document,
     the following terms and definitions apply.</p>
-<h2 class="TermNum" id="calendar-system">3.1</h2><p class="Terms" style="text-align:left;">calendar system</p><p id="_72ecc12e-2f40-4ee2-895a-2a5b691bbc79">an information system that provides calendaring and scheduling functionality.</p>
-<div class="Note"><p class="Note">Note 1 to entry: The term <i>calendar system</i> in this standard specifically refers to calendaring systems that fulfill the requirements of CalConnect calendaring standards.</p></div><h2 class="TermNum" id="calendar-spam">3.2</h2>
-  <p class="Terms" style="text-align:left;">calendar spam</p>
+
+<h2 class="TermNum" id="calendar-system">3.1
+  <p class="Terms" style="text-align:left;">calendar system</p></h2>
+  <p id="_72ecc12e-2f40-4ee2-895a-2a5b691bbc79">an information system that provides calendaring and scheduling functionality.</p>
+
+<div class="Note">
+  <p class="Note">Note 1 to entry: The term <i>calendar system</i> in this standard specifically refers to calendaring systems that fulfill the requirements of CalConnect calendaring standards.</p>
+</div>
+
+<h2 class="TermNum" id="calendar-spam">3.2 
+  <p class="Terms" style="text-align:left;">calendar spam</p></h2>
   <p id="_f0fd56f0-d8ef-448c-9ca8-4b83b4271b59">unsolicited calendar events and meeting invitations delivered through calendaring systems</p>
-<h2 class="TermNum" id="calendar-abuse">3.3</h2>
-  <p class="Terms" style="text-align:left;">calendar abuse</p>
+
+<h2 class="TermNum" id="calendar-abuse">3.3
+  <p class="Terms" style="text-align:left;">calendar abuse</p></h2>
   <p id="_6b3733a6-404a-45e5-8912-4d01bb09d16f">malicious usage of a <i>calendar system</i> (<a href="#calendar-system">3.1</a>), possibly leading to an <i>attack</i> (<a href="#ISO27000">ISO/IEC 27000 3.2</a>) on the receiving user</p>
-<h2 class="TermNum" id="attack">3.4</h2><p class="Terms" style="text-align:left;">attack</p><p id="_2b484baa-6bbe-4f99-91ec-85d03f5452c1">attempt to destroy, expose, alter, disable, steal or gain unauthorized access to or make unauthorized use of an asset</p>
-<p>[SOURCE: <a href="#ISO27000">ISO/IEC 27000</a>]</p><h2 class="TermNum" id="spam">3.5</h2><p class="Terms" style="text-align:left;">spam</p><p id="_0e1c054b-2203-43ba-8418-b3b62c57ec2d">SPAM</p><p id="_95574474-1419-4269-a2c9-ffefee94576b">unsolicited information</p>
+
+<h2 class="TermNum" id="attack">3.4
+  <p class="Terms" style="text-align:left;">attack</p></h2>
+<p id="_2b484baa-6bbe-4f99-91ec-85d03f5452c1">attempt to destroy, expose, alter, disable, steal or gain unauthorized access to or make unauthorized use of an asset</p>
+<p>[SOURCE: <a href="#ISO27000">ISO/IEC 27000</a>]</p>
+
+<h2 class="TermNum" id="spam">3.5
+  <p class="Terms" style="text-align:left;">spam</p></h2>
+<p class="AltTerms" id="_0e1c054b-2203-43ba-8418-b3b62c57ec2d">SPAM</p><p id="_95574474-1419-4269-a2c9-ffefee94576b">unsolicited information</p>
 </div>
       <div id="_calendar_abuse_flow">
         <h1>4.&#xA0; Calendar abuse flow</h1>
@@ -1292,7 +1328,7 @@ specifies how conformance with these classes shall be tested.</p>
       </div>
       <br />
       <div id="AnnexA" class="Section3">
-        <h1 class="Annex"><b>Appendix A</b><br />(informative)<br /><br /><b>Technical controls</b></h1>
+        <h1 class="Annex"><b>Appendix A<span class="obligation"/> (informative) </span><b>Technical controls</b></h1>
         <div id="_introduction_2">
   <h2>A.1. Introduction</h2>
   <p id="_80430d88-ebff-4978-9dd2-259441a705fb">This annex provides a list of technical controls that constitute best practice for
@@ -1318,7 +1354,7 @@ calendar operators.</p>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=AM_HTMLorMML"></script>
   <script>//TOC generation
       $('#toc').toc({
-          'selectors': 'h1,h2:not(.TermNum)', //elements to use as headings
+          'selectors': 'h1,h2', //elements to use as headings
           'container': 'main', //element to find all selectors in
           'smoothScrolling': true, //enable or disable smooth scrolling on click
           'prefix': 'toc', //prefix for anchor tags and class names
@@ -1374,15 +1410,14 @@ $('#toggle').on('click', function(){
     }
     </script>
 
+
 <script>
-  $(document).ready(function() {
-	  $('[id^=toc]').each(function ()
-	  {
-	     var currentToc = $(this);
-       var url = window.location.href;
-	     currentToc.wrap("<a href='" + url + "#" + currentToc.attr("id") + "' </a>");
-	  });
-});
+  anchors.options = {
+  placement: 'left'
+};
+anchors.add('h1, h2, h3, h4');
 </script>
+  
+
 </body>
 </html>
